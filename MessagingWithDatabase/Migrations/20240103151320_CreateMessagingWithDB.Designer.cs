@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MessagingWithDatabase.Migrations
 {
     [DbContext(typeof(Model))]
-    [Migration("20240101162357_CreateMessagingWithDB")]
+    [Migration("20240103151320_CreateMessagingWithDB")]
     partial class CreateMessagingWithDB
     {
         /// <inheritdoc />
@@ -32,6 +32,10 @@ namespace MessagingWithDatabase.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("UserID"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

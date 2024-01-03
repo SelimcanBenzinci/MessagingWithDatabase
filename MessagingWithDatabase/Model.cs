@@ -18,7 +18,7 @@ namespace MessagingWithDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=ask12345;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=asd;TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -40,6 +40,7 @@ namespace MessagingWithDatabase
                 UserID = null,
                 Name = name,
                 Password = "asd",
+                Email = "",
             };
 
             Add(user);

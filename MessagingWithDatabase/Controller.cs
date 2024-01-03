@@ -17,7 +17,8 @@ namespace MessagingWithDatabase
 
             Model.AddUser("ASK");
 
-            Application.Run(new Form1());
+            Application.Run(new Form1(this));
+            
         }
 
     }
