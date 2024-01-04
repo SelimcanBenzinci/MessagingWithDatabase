@@ -38,7 +38,6 @@ namespace MessagingWithDatabase
                 mainForm.flowLayoutPanel1.Controls.Add(chart);
                 Model.AddFriend(user);
             }            
-            
         }
 
         public void populateChat(User targetUser)
