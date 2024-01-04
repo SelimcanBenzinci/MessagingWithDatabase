@@ -52,7 +52,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(22, 27);
+            flowLayoutPanel1.Location = new Point(22, 15);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(350, 273);
             flowLayoutPanel1.TabIndex = 2;
@@ -65,7 +65,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "ChatMenu";
-            Size = new Size(380, 358);
+            Size = new Size(386, 358);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -75,5 +75,6 @@
         private TextBox textBox1;
         private Button button1;
         public FlowLayoutPanel flowLayoutPanel1;
+
     }
 }
