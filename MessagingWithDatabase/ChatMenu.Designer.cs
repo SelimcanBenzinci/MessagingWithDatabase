@@ -52,7 +52,7 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(22, 15);
+            flowLayoutPanel1.Location = new Point(22, 17);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(350, 273);
             flowLayoutPanel1.TabIndex = 2;

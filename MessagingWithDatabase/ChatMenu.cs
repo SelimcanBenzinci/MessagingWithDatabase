@@ -31,6 +31,8 @@ namespace MessagingWithDatabase
             InitializeComponent();
             controller = cntrl;
 
+            flowLayoutPanel1.VerticalScroll.Visible = true;
+
             Refresh();
 
             myTimer.Tick += new EventHandler(Refresh);
@@ -46,7 +48,7 @@ namespace MessagingWithDatabase
 
             int cntMsg = 0;
 
-            if (bGroupMenu == null)
+            if (bGroupMenu)
             {
                 // Group Message
             }
@@ -74,6 +76,7 @@ namespace MessagingWithDatabase
         private void button1_Click(object sender, EventArgs e)
         {
             controller.Model.SendMessage(controller.CurrentUser, controller.TargetUser, textBox1.Text);
+            textBox1.Text = string.Empty;
 
         }
 
