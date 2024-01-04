@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            NameText = new TextBox();
+            MailText = new TextBox();
             PasswordText = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
-            // NameText
+            // MailText
             // 
-            NameText.Location = new Point(280, 39);
-            NameText.Name = "NameText";
-            NameText.Size = new Size(125, 27);
-            NameText.TabIndex = 0;
+            MailText.Location = new Point(280, 39);
+            MailText.Name = "MailText";
+            MailText.Size = new Size(125, 27);
+            MailText.TabIndex = 0;
             // 
             // PasswordText
             // 
@@ -63,7 +63,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(button1);
             Controls.Add(PasswordText);
-            Controls.Add(NameText);
+            Controls.Add(MailText);
             Name = "Register";
             Size = new Size(579, 201);
             ResumeLayout(false);
@@ -72,7 +72,7 @@
 
         #endregion
 
-        private TextBox NameText;
+        private TextBox MailText;
         private TextBox PasswordText;
         private Button button1;
     }

@@ -34,9 +34,12 @@ namespace MessagingWithDatabase.Migrations
                 {
                     UserID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ImageByteArray = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    visibilty = table.Column<int>(type: "int", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: false),
                     FriendIDs_Capacity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

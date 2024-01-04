@@ -28,7 +28,7 @@ namespace MessagingWithDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            controller.Model.AddUser(NameText.Text, PasswordText.Text);
+            controller.Model.AddUser(MailText.Text, PasswordText.Text);
 
             Login login = new Login(controller);
 

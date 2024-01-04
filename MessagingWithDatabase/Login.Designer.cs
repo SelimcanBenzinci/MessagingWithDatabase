@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            NameText = new TextBox();
+            MailText = new TextBox();
             PasswordText = new TextBox();
             button1 = new Button();
             label1 = new Label();
             Kaydol = new Button();
             SuspendLayout();
             // 
-            // NameText
+            // MailText
             // 
-            NameText.Location = new Point(280, 65);
-            NameText.Name = "NameText";
-            NameText.Size = new Size(125, 27);
-            NameText.TabIndex = 0;
+            MailText.Location = new Point(280, 65);
+            MailText.Name = "MailText";
+            MailText.Size = new Size(125, 27);
+            MailText.TabIndex = 0;
             // 
             // PasswordText
             // 
@@ -85,7 +85,7 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(PasswordText);
-            Controls.Add(NameText);
+            Controls.Add(MailText);
             Name = "Login";
             Size = new Size(505, 266);
             ResumeLayout(false);
@@ -94,7 +94,7 @@
 
         #endregion
 
-        private TextBox NameText;
+        private TextBox MailText;
         private TextBox PasswordText;
         private Button button1;
         private Label label1;

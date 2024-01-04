@@ -22,7 +22,7 @@ namespace MessagingWithDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=asd;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=ask12345;TrustServerCertificate=True;");
         }
 
         public Model()
@@ -46,15 +46,18 @@ namespace MessagingWithDatabase
             return users;
         }
 
-        public void AddUser(string name, string password)
+        public void AddUser(string mail, string password)
         {
 
             User user = new User()
             {
                 UserID = null,
-                Name = name,
+                Name = string.Empty,
+                Status = string.Empty,
+                visibilty = Visibilty.Herkes,
+                ImageByteArray = new byte[0],
                 Password = password,
-                Email = "",
+                Email = mail,
                 FriendIDs = new List<int?>(),
             };
 
@@ -63,13 +66,13 @@ namespace MessagingWithDatabase
         }
 
 
-        public User ControlUser(string name, string password) 
+        public User ControlUser(string email, string password) 
         {
 
             foreach (User user in Users)
             {
                 
-                if (user.Name == name)
+                if (user.Email == email)
                 {
                     if (user.Password == password)
                     {

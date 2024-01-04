@@ -11,19 +11,35 @@ using System.Threading.Tasks;
 
 namespace MessagingWithDatabase
 {
+
     public class User
     {
+        public enum Visibilty
+        {
+            Herkes = 0,
+            Ekli = 1,
+            Kimse = 2,
+        }
+
+
         [Key]
         public int? UserID { get; set; }
 
-        [StringLength(250)]
-        [Required]
         public string Name { get; set; }
+
+        public string Status { get; set; }
+
+        public byte[] ImageByteArray { get; set; }
+
+        [EnumDataType(typeof(Visibilty))]
+        public Visibilty visibilty { get; set; }
 
         [StringLength(250)]
         [Required]
         public string Password { get; set; }
 
+        [StringLength(250)]
+        [Required]
         public string Email { get; set; }
 
         public List<int?> FriendIDs { get; set; }

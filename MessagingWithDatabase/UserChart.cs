@@ -31,7 +31,7 @@ namespace MessagingWithDatabase
         public void ConfigureChart(User Usrtext)
         {
             TargetUser = Usrtext;
-            button1.Text = Usrtext.Name;
+            button1.Text = Usrtext.Email;
         }
 
         private void button1_Click(object sender, EventArgs e)

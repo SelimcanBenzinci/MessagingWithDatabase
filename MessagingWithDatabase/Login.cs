@@ -30,7 +30,7 @@ namespace MessagingWithDatabase
         private void button1_Click(object sender, EventArgs e)
         {
 
-            User user = controller.Model.ControlUser(NameText.Text, PasswordText.Text);
+            User user = controller.Model.ControlUser(MailText.Text, PasswordText.Text);
 
             if (user != null)
             {
