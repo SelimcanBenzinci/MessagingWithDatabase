@@ -12,7 +12,13 @@ namespace MessagingWithDatabase
         {
             InitializeComponent();
             controller = cntrl;
-            
+
+            Login login = new Login(controller);
+            controller.mainForm = this;
+
+            panel1.Controls.Add(login);
+
         }
+
     }
 }

@@ -22,6 +22,35 @@ namespace MessagingWithDatabase.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MessagingWithDatabase.Message", b =>
+                {
+                    b.Property<int?>("MessageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("MessageID"));
+
+                    b.Property<string>("MessageText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ReceiverUserID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SenderUserID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("bSeen")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("MessageID");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("MessagingWithDatabase.User", b =>
                 {
                     b.Property<int?>("UserID")
@@ -47,6 +76,28 @@ namespace MessagingWithDatabase.Migrations
                     b.HasKey("UserID");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("MessagingWithDatabase.User", b =>
+                {
+                    b.OwnsOne("System.Collections.Generic.List<int?>", "FriendIDs", b1 =>
+                        {
+                            b1.Property<int>("UserID")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Capacity")
+                                .HasColumnType("int");
+
+                            b1.HasKey("UserID");
+
+                            b1.ToTable("Users");
+
+                            b1.WithOwner()
+                                .HasForeignKey("UserID");
+                        });
+
+                    b.Navigation("FriendIDs")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
