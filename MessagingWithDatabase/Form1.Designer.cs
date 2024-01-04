@@ -34,7 +34,7 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(411, 91);
+            panel1.Location = new Point(433, 88);
             panel1.Name = "panel1";
             panel1.Size = new Size(593, 431);
             panel1.TabIndex = 0;
@@ -60,7 +60,7 @@
 
         #endregion
 
-        private Panel panel1;
+        public Panel panel1;
         public FlowLayoutPanel flowLayoutPanel1;
     }
 }

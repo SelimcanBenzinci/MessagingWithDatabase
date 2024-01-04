@@ -14,6 +14,7 @@ namespace MessagingWithDatabase
     {
 
         public Controller controller { get; set; }
+        public User TargetUser { get; set; }
 
         public UserChart()
         {
@@ -27,10 +28,15 @@ namespace MessagingWithDatabase
 
         }
 
-        public void ConfigureChart(string text)
+        public void ConfigureChart(User Usrtext)
         {
-            label1.Text = text;
+            TargetUser = Usrtext;
+            button1.Text = Usrtext.Name;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            controller.populateChat(TargetUser);
+        }
     }
 }

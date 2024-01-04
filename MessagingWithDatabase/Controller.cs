@@ -29,15 +29,22 @@ namespace MessagingWithDatabase
 
             foreach (User user in users)
             {
-                UserChart chart = new UserChart();
-                chart.ConfigureChart(user.Name);
+                UserChart chart = new UserChart(this);
+                chart.ConfigureChart(user);
                 mainForm.flowLayoutPanel1.Controls.Add(chart);
                 Model.AddFriend(user);
-            }
-
-            List<User> friends =  Model.GetFriends();
+            }            
             
-            Model.SendMessage(CurrentUser, friends[1], "asdfgfdg");
+        }
+
+        public void populateChat(User targetUser)
+        {
+            ChatMenu chatMenu = new ChatMenu(this);
+
+            chatMenu.TargetUser = targetUser;
+
+           // mainForm.panel1.Controls.Clear();
+            mainForm.panel1.Controls.Add(chatMenu);
         }
 
     }
