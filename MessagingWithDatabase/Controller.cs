@@ -13,6 +13,7 @@ namespace MessagingWithDatabase
         public Form1 mainForm { get; set; }
 
         public User CurrentUser { get; set; }
+        public User TargetUser { get; set; }
 
         public Controller()
         {
@@ -29,6 +30,9 @@ namespace MessagingWithDatabase
 
             foreach (User user in users)
             {
+                if (user == CurrentUser)
+                    continue;
+
                 UserChart chart = new UserChart(this);
                 chart.ConfigureChart(user);
                 mainForm.flowLayoutPanel1.Controls.Add(chart);
@@ -39,11 +43,11 @@ namespace MessagingWithDatabase
 
         public void populateChat(User targetUser)
         {
+            this.TargetUser = targetUser;
+
             ChatMenu chatMenu = new ChatMenu(this);
 
-            chatMenu.TargetUser = targetUser;
-
-           // mainForm.panel1.Controls.Clear();
+            mainForm.panel1.Controls.Clear();
             mainForm.panel1.Controls.Add(chatMenu);
         }
 

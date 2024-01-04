@@ -117,7 +117,23 @@ namespace MessagingWithDatabase
 
             Add(msg);
             SaveChanges();
+        }
 
+        public List<Message> GetMessages(User currentUser, User targetUser) 
+        {
+            List < Message > msgs = new List < Message >();
+            foreach (Message item in Messages)
+            {
+                if (item.SenderUserID == currentUser.UserID || item.ReceiverUserID == currentUser.UserID)
+                {
+                    if (item.SenderUserID == targetUser.UserID || item.ReceiverUserID == targetUser.UserID)
+                    {
+                        msgs.Add(item);
+                    }
+                } 
+            }
+
+            return msgs;
         }
 
 

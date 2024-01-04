@@ -35,16 +35,16 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(22, 435);
+            textBox1.Location = new Point(22, 322);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(424, 27);
+            textBox1.Size = new Size(266, 27);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(464, 435);
+            button1.Location = new Point(294, 320);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(78, 29);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -54,7 +54,7 @@
             // 
             flowLayoutPanel1.Location = new Point(22, 27);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(536, 389);
+            flowLayoutPanel1.Size = new Size(350, 273);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // ChatMenu
@@ -65,7 +65,7 @@
             Controls.Add(button1);
             Controls.Add(textBox1);
             Name = "ChatMenu";
-            Size = new Size(579, 489);
+            Size = new Size(380, 358);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -74,6 +74,6 @@
 
         private TextBox textBox1;
         private Button button1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        public FlowLayoutPanel flowLayoutPanel1;
     }
 }

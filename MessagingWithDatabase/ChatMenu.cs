@@ -12,8 +12,6 @@ namespace MessagingWithDatabase
 {
     public partial class ChatMenu : UserControl
     {
-        public User TargetUser { get; set; }
-
         public Controller controller { get; set; }
         public ChatMenu()
         {
@@ -24,11 +22,18 @@ namespace MessagingWithDatabase
         {
             InitializeComponent();
             controller = cntrl;
+
+            foreach (Message item in controller.Model.GetMessages(controller.CurrentUser, controller.TargetUser))
+            {
+                MessageChart chart = new MessageChart(controller, item);
+
+                flowLayoutPanel1.Controls.Add(chart);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           controller.Model.SendMessage(controller.CurrentUser, TargetUser,textBox1.Text);
+            controller.Model.SendMessage(controller.CurrentUser, controller.TargetUser, textBox1.Text);
         }
     }
 }
