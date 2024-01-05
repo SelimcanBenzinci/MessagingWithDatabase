@@ -13,7 +13,7 @@ namespace MessagingWithDatabase
 {
     public partial class AccountSetting : UserControl
     {
-
+        //yorum satırı
         public Controller controller { get; set; }
 
         public string imageDir { get; set; }
