@@ -21,18 +21,21 @@ namespace MessagingWithDatabase
             InitializeComponent();
         }
 
-        public UserChart(Controller cntrl)
+        public UserChart(Controller cntrl, User usr)
         {
             InitializeComponent();
             controller = cntrl;
+            TargetUser = usr;
+            button1.Text = usr.Email;
+            statusLabel.Text = usr.Status;
+            if (usr.ImageByteArray.Length != 0)
+            {
+                MemoryStream mem = new MemoryStream(usr.ImageByteArray);
+                pictureBox1.Image = Image.FromStream(mem);
+            }
 
         }
 
-        public void ConfigureChart(User Usrtext)
-        {
-            TargetUser = Usrtext;
-            button1.Text = Usrtext.Email;
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

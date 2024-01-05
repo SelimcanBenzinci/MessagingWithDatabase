@@ -32,12 +32,13 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            listBox1 = new ListBox();
-            pictureBox1 = new PictureBox();
+            NameText = new TextBox();
+            StatusText = new TextBox();
+            visiblityText = new ListBox();
+            PictureBox = new PictureBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SaveButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)PictureBox).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -70,68 +71,80 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(49, 203);
+            label4.Location = new Point(49, 223);
             label4.Name = "label4";
             label4.Size = new Size(49, 20);
             label4.TabIndex = 3;
             label4.Text = "Resim";
             // 
-            // textBox1
+            // NameText
             // 
-            textBox1.Location = new Point(151, 50);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(217, 27);
-            textBox1.TabIndex = 4;
+            NameText.Location = new Point(151, 50);
+            NameText.Name = "NameText";
+            NameText.Size = new Size(217, 27);
+            NameText.TabIndex = 4;
             // 
-            // textBox2
+            // StatusText
             // 
-            textBox2.Location = new Point(151, 91);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(217, 27);
-            textBox2.TabIndex = 5;
+            StatusText.Location = new Point(151, 91);
+            StatusText.Name = "StatusText";
+            StatusText.Size = new Size(217, 27);
+            StatusText.TabIndex = 5;
             // 
-            // listBox1
+            // visiblityText
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(151, 130);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(217, 24);
-            listBox1.TabIndex = 7;
+            visiblityText.FormattingEnabled = true;
+            visiblityText.ItemHeight = 20;
+            visiblityText.Location = new Point(151, 130);
+            visiblityText.Name = "visiblityText";
+            visiblityText.Size = new Size(217, 64);
+            visiblityText.TabIndex = 7;
             // 
-            // pictureBox1
+            // PictureBox
             // 
-            pictureBox1.Location = new Point(151, 240);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
-            pictureBox1.TabIndex = 8;
-            pictureBox1.TabStop = false;
+            PictureBox.Location = new Point(151, 252);
+            PictureBox.Name = "PictureBox";
+            PictureBox.Size = new Size(100, 100);
+            PictureBox.TabIndex = 8;
+            PictureBox.TabStop = false;
             // 
             // button1
             // 
-            button1.Location = new Point(151, 194);
+            button1.Location = new Point(151, 214);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 9;
             button1.Text = "Yükle";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // SaveButton
+            // 
+            SaveButton.Location = new Point(274, 352);
+            SaveButton.Name = "SaveButton";
+            SaveButton.Size = new Size(94, 29);
+            SaveButton.TabIndex = 10;
+            SaveButton.Text = "Kaydet";
+            SaveButton.UseVisualStyleBackColor = true;
+            SaveButton.Click += SaveButton_Click;
             // 
             // AccountSetting
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(SaveButton);
             Controls.Add(button1);
-            Controls.Add(pictureBox1);
-            Controls.Add(listBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(PictureBox);
+            Controls.Add(visiblityText);
+            Controls.Add(StatusText);
+            Controls.Add(NameText);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "AccountSetting";
-            Size = new Size(390, 359);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Size = new Size(390, 394);
+            ((System.ComponentModel.ISupportInitialize)PictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -142,10 +155,11 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private ListBox listBox1;
-        private PictureBox pictureBox1;
+        private TextBox NameText;
+        private TextBox StatusText;
+        private ListBox visiblityText;
+        private PictureBox PictureBox;
         private Button button1;
+        private Button SaveButton;
     }
 }

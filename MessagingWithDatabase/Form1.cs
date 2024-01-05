@@ -20,5 +20,13 @@ namespace MessagingWithDatabase
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+
+            AccountSetting accountSetting = new AccountSetting(controller);
+
+            panel1.Controls.Add(accountSetting);
+        }
     }
 }

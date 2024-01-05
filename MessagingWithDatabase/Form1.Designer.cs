@@ -30,6 +30,7 @@
         {
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            AccountButton = new Button();
             SuspendLayout();
             // 
             // panel1
@@ -43,14 +44,26 @@
             // 
             flowLayoutPanel1.Location = new Point(57, 36);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(250, 498);
+            flowLayoutPanel1.Size = new Size(318, 498);
             flowLayoutPanel1.TabIndex = 1;
+            // 
+            // AccountButton
+            // 
+            AccountButton.Location = new Point(433, 23);
+            AccountButton.Name = "AccountButton";
+            AccountButton.Size = new Size(219, 29);
+            AccountButton.TabIndex = 2;
+            AccountButton.Text = "Hesap Ayarları";
+            AccountButton.UseVisualStyleBackColor = true;
+            AccountButton.Visible = false;
+            AccountButton.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1056, 625);
+            Controls.Add(AccountButton);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             Name = "Form1";
@@ -62,5 +75,6 @@
 
         public Panel panel1;
         public FlowLayoutPanel flowLayoutPanel1;
+        public Button AccountButton;
     }
 }

@@ -18,7 +18,7 @@ namespace MessagingWithDatabase
         {
             Herkes = 0,
             Ekli = 1,
-            Kimse = 2,
+            Hickimse = 2,
         }
 
 

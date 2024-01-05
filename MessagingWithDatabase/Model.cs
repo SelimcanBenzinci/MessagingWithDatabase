@@ -65,6 +65,12 @@ namespace MessagingWithDatabase
             SaveChanges();
         }
 
+        public void UpdateUser(User usr)
+        {
+            Update(usr);
+            SaveChanges();
+        }
+
 
         public User ControlUser(string email, string password) 
         {

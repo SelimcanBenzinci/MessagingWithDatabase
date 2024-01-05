@@ -33,11 +33,12 @@ namespace MessagingWithDatabase
                 if (user == CurrentUser)
                     continue;
 
-                UserChart chart = new UserChart(this);
-                chart.ConfigureChart(user);
+                UserChart chart = new UserChart(this, user);
                 mainForm.flowLayoutPanel1.Controls.Add(chart);
                 Model.AddFriend(user);
-            }            
+            }
+
+            mainForm.AccountButton.Visible = true;
         }
 
         public void populateChat(User targetUser)
