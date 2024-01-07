@@ -1,6 +1,6 @@
 ﻿namespace MessagingWithDatabase
 {
-    partial class UserChart
+    partial class ChatChart
     {
         /// <summary> 
         /// Required designer variable.

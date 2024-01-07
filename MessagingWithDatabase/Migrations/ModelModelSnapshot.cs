@@ -22,6 +22,67 @@ namespace MessagingWithDatabase.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("MessagingWithDatabase.Group", b =>
+                {
+                    b.Property<int?>("GroupID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("GroupID"));
+
+                    b.Property<DateTime>("CreationTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GroupAdminUserID")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("ImageByteArray")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GroupID");
+
+                    b.HasIndex("GroupAdminUserID");
+
+                    b.ToTable("Groups");
+                });
+
+            modelBuilder.Entity("MessagingWithDatabase.GroupMessage", b =>
+                {
+                    b.Property<int?>("GroupMessageID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("GroupMessageID"));
+
+                    b.Property<int>("GroupID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MessageText")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SenderUserID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("time")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("GroupMessageID");
+
+                    b.HasIndex("GroupID");
+
+                    b.ToTable("GroupMessages");
+                });
+
             modelBuilder.Entity("MessagingWithDatabase.Message", b =>
                 {
                     b.Property<int?>("MessageID")
@@ -64,6 +125,9 @@ namespace MessagingWithDatabase.Migrations
                         .HasMaxLength(250)
                         .HasColumnType("nvarchar(250)");
 
+                    b.Property<int?>("GroupID")
+                        .HasColumnType("int");
+
                     b.Property<byte[]>("ImageByteArray")
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
@@ -86,12 +150,40 @@ namespace MessagingWithDatabase.Migrations
 
                     b.HasKey("UserID");
 
+                    b.HasIndex("GroupID");
+
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("MessagingWithDatabase.Group", b =>
+                {
+                    b.HasOne("MessagingWithDatabase.User", "GroupAdmin")
+                        .WithMany()
+                        .HasForeignKey("GroupAdminUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("GroupAdmin");
+                });
+
+            modelBuilder.Entity("MessagingWithDatabase.GroupMessage", b =>
+                {
+                    b.HasOne("MessagingWithDatabase.Group", "group")
+                        .WithMany()
+                        .HasForeignKey("GroupID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("group");
                 });
 
             modelBuilder.Entity("MessagingWithDatabase.User", b =>
                 {
-                    b.OwnsOne("System.Collections.Generic.List<int?>", "FriendIDs", b1 =>
+                    b.HasOne("MessagingWithDatabase.Group", null)
+                        .WithMany("GroupUsers")
+                        .HasForeignKey("GroupID");
+
+                    b.OwnsOne("System.Collections.Generic.List<int>", "FriendIDs", b1 =>
                         {
                             b1.Property<int>("UserID")
                                 .HasColumnType("int");
@@ -109,6 +201,11 @@ namespace MessagingWithDatabase.Migrations
 
                     b.Navigation("FriendIDs")
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MessagingWithDatabase.Group", b =>
+                {
+                    b.Navigation("GroupUsers");
                 });
 #pragma warning restore 612, 618
         }

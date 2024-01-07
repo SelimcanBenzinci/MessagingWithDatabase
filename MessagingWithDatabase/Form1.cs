@@ -28,5 +28,14 @@ namespace MessagingWithDatabase
 
             panel1.Controls.Add(accountSetting);
         }
+
+        private void CreateGroupButton_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+
+            CreateGroup createGroup = new CreateGroup(controller);
+
+            panel1.Controls.Add(createGroup);
+        }
     }
 }

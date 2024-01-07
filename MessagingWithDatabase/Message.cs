@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MessagingWithDatabase
 {
-    public class Message
+    public class Message : IMessage
     {
         [Key]
         public int? MessageID { get; set; }
@@ -21,5 +21,25 @@ namespace MessagingWithDatabase
         public DateTime time{ get; set; }
 
         public bool bSeen { get; set; }
+
+
+        //Interface Methods
+        public int? GetSenderUser()
+        {
+            return SenderUserID;
+        }
+
+        public string GetMessageText()
+        {
+            return MessageText;
+        }
+
+        public bool GetbSeen()
+        {
+            return bSeen;
+        }
+
+        public int? GetMessageID()
+        { return MessageID; }
     }
 }

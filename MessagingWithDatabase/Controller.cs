@@ -13,11 +13,14 @@ namespace MessagingWithDatabase
         public Form1 mainForm { get; set; }
 
         public User CurrentUser { get; set; }
-        public User TargetUser { get; set; }
+        public IChatBox CurrentChat { get; set; }
+
+        public ICollection<User> GroupUsers { get; set; }
 
         public Controller()
         {
             Model = new Model(this);
+            GroupUsers = new List<User>();
 
             Form1 mainForm = new Form1(this);
 
@@ -25,25 +28,26 @@ namespace MessagingWithDatabase
             
         }
 
-        public void populateUsers(List<User> users)
+        public void populateChatBoxs(List<IChatBox> chatBoxes)
         {
-
-            foreach (User user in users)
+            mainForm.flowLayoutPanel1.Controls.Clear();
+            foreach (IChatBox user in chatBoxes)
             {
                 if (user == CurrentUser)
                     continue;
 
-                UserChart chart = new UserChart(this, user);
+                ChatChart chart = new ChatChart(this, user);
                 mainForm.flowLayoutPanel1.Controls.Add(chart);
-                Model.AddFriend(user);
             }
 
             mainForm.AccountButton.Visible = true;
+            mainForm.CreateGroupButton.Visible = true;
         }
 
-        public void populateChat(User targetUser)
+        public void populateChat(IChatBox chatBox)
         {
-            this.TargetUser = targetUser;
+
+            this.CurrentChat = chatBox;
 
             ChatMenu chatMenu = new ChatMenu(this);
 

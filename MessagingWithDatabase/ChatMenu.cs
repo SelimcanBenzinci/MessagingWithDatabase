@@ -48,14 +48,9 @@ namespace MessagingWithDatabase
 
             int cntMsg = 0;
 
-            if (bGroupMenu)
-            {
-                // Group Message
-            }
-            else
-            {
-                cntMsg = controller.Model.GetMessages(controller.CurrentUser, controller.TargetUser).Count();
-            }
+            
+            cntMsg = controller.Model.GetIMessages(controller.CurrentChat).Count();
+          
 
             if (cntMessage == cntMsg)
             {
@@ -63,7 +58,7 @@ namespace MessagingWithDatabase
             }
 
             flowLayoutPanel1.Controls.Clear();
-            foreach (Message item in controller.Model.GetMessages(controller.CurrentUser, controller.TargetUser))
+            foreach (IMessage item in controller.Model.GetIMessages(controller.CurrentChat))
             {
                 MessageChart chart = new MessageChart(controller, item);
 
@@ -75,10 +70,10 @@ namespace MessagingWithDatabase
 
         private void button1_Click(object sender, EventArgs e)
         {
-            controller.Model.SendMessage(controller.CurrentUser, controller.TargetUser, textBox1.Text);
-            textBox1.Text = string.Empty;
+            controller.Model.SendMessage(controller.CurrentChat, textBox1.Text);
 
+            textBox1.Text = string.Empty;
         }
-        
+
     }
 }

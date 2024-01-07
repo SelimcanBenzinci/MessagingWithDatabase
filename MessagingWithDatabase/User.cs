@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.Design.Serialization;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 namespace MessagingWithDatabase
 {
 
-    public class User
+    public class User : IChatBox
     {
         public enum Visibilty
         {
@@ -20,7 +21,6 @@ namespace MessagingWithDatabase
             Ekli = 1,
             Hickimse = 2,
         }
-
 
         [Key]
         public int? UserID { get; set; }
@@ -42,7 +42,34 @@ namespace MessagingWithDatabase
         [Required]
         public string Email { get; set; }
 
-        public List<int?> FriendIDs { get; set; }
+        public List<int> FriendIDs { get; set; }
+
+
+
+        
+
+
+        //Interface Methods
+        public string GetName()
+        {
+            return Name;
+        }
+
+        public string GetLastMessage() 
+        {
+            return Status;
+        }
+        public byte[] GetImage()
+        {
+            return ImageByteArray;
+        }
+
+        public int? GetID() 
+        {
+            return UserID;
+        }
+
+       
 
     }
 

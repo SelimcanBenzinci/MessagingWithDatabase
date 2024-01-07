@@ -19,12 +19,14 @@ namespace MessagingWithDatabase
             InitializeComponent();
         }
 
-        public MessageChart(Controller cntrl, Message item)
+        public MessageChart(Controller cntrl, IMessage item)
         {
             InitializeComponent();
             controller = cntrl;
 
-            label1.Text = item.MessageText;
+            NameLabel.Text = controller.Model.GetUser(item.GetSenderUser()).Name;
+
+            label1.Text = item.GetMessageText();
         }
 
     }

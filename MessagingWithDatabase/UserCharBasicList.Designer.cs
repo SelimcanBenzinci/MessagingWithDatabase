@@ -1,6 +1,6 @@
 ﻿namespace MessagingWithDatabase
 {
-    partial class MessageChart
+    partial class UserCharBasicList
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,43 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            NameLabel = new Label();
+            AddUserButton = new Button();
             SuspendLayout();
             // 
-            // label1
+            // AddUserButton
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(83, -1);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            AddUserButton.BackColor = Color.Snow;
+            AddUserButton.Location = new Point(5, 2);
+            AddUserButton.Name = "AddUserButton";
+            AddUserButton.Size = new Size(177, 32);
+            AddUserButton.TabIndex = 0;
+            AddUserButton.Text = "button1";
+            AddUserButton.UseVisualStyleBackColor = false;
+            AddUserButton.Click += button1_Click;
             // 
-            // NameLabel
-            // 
-            NameLabel.AutoSize = true;
-            NameLabel.Location = new Point(4, 1);
-            NameLabel.Name = "NameLabel";
-            NameLabel.Size = new Size(50, 20);
-            NameLabel.TabIndex = 1;
-            NameLabel.Text = "label2";
-            // 
-            // MessageChart
+            // UserCharBasicList
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(NameLabel);
-            Controls.Add(label1);
-            Name = "MessageChart";
-            Size = new Size(476, 20);
+            Controls.Add(AddUserButton);
+            Name = "UserCharBasicList";
+            Size = new Size(186, 37);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label NameLabel;
+        public Button AddUserButton;
     }
 }

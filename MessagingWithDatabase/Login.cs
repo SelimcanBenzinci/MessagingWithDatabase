@@ -38,7 +38,7 @@ namespace MessagingWithDatabase
 
                 controller.CurrentUser = user;
 
-                controller.populateUsers(controller.Model.GetUsers());
+                controller.populateChatBoxs(controller.Model.GetChatBoxs());
 
                 Parent.Controls.Remove(this);
             }

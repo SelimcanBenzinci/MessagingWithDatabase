@@ -31,6 +31,7 @@
             panel1 = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             AccountButton = new Button();
+            CreateGroupButton = new Button();
             SuspendLayout();
             // 
             // panel1
@@ -42,6 +43,7 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Location = new Point(57, 36);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(318, 498);
@@ -49,7 +51,7 @@
             // 
             // AccountButton
             // 
-            AccountButton.Location = new Point(433, 23);
+            AccountButton.Location = new Point(807, 584);
             AccountButton.Name = "AccountButton";
             AccountButton.Size = new Size(219, 29);
             AccountButton.TabIndex = 2;
@@ -58,11 +60,23 @@
             AccountButton.Visible = false;
             AccountButton.Click += button1_Click;
             // 
+            // CreateGroupButton
+            // 
+            CreateGroupButton.Location = new Point(433, 584);
+            CreateGroupButton.Name = "CreateGroupButton";
+            CreateGroupButton.Size = new Size(208, 29);
+            CreateGroupButton.TabIndex = 3;
+            CreateGroupButton.Text = "Grup Oluştur";
+            CreateGroupButton.UseVisualStyleBackColor = true;
+            CreateGroupButton.Visible = false;
+            CreateGroupButton.Click += CreateGroupButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1056, 625);
+            Controls.Add(CreateGroupButton);
             Controls.Add(AccountButton);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
@@ -76,5 +90,6 @@
         public Panel panel1;
         public FlowLayoutPanel flowLayoutPanel1;
         public Button AccountButton;
+        public Button CreateGroupButton;
     }
 }
