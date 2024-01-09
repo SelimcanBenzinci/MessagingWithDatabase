@@ -28,14 +28,10 @@ namespace MessagingWithDatabase
             InitializeComponent();
             controller = cntrl;
 
-            List<User> users = new List<User>();
-            users.AddRange(controller.Model.GetUsers());
-
-            foreach (User user in users)
+            foreach (Friend user in controller.CurrentUser.FriendIDs)
             {
-                if (user == controller.CurrentUser)
-                    continue;
-                UserCharBasicList basicUser = new UserCharBasicList(controller, user);
+                User user1 = controller.Model.Users.Where(x => x.Id == user.FriendId).FirstOrDefault();
+                UserCharBasicList basicUser = new UserCharBasicList(controller, user1);
 
                 flowLayoutPanel1.Controls.Add(basicUser);
             }

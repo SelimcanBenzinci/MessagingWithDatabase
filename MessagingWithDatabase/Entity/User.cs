@@ -43,7 +43,7 @@ namespace MessagingWithDatabase
         [Required]
         public string Email { get; set; }
 
-        public List<int> FriendIDs { get; set; }
+        public List<Friend> FriendIDs { get; set; }
 
         public List<Group> Groups { get; set; } = new();
 
@@ -67,6 +67,18 @@ namespace MessagingWithDatabase
             return Id;
         }
 
+    }
+
+
+
+    public class Friend
+    {
+        [Key]
+        public int? Id { get; set; } = null;
+
+        public int UserID { get; set; }
+
+        public int FriendId { get; set; }
     }
 
 

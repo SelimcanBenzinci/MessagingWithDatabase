@@ -44,7 +44,15 @@ namespace MessagingWithDatabase
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            controller.CurrentUser.FriendIDs.Add(user.Id.GetValueOrDefault());
+            Friend friend = new Friend()
+            { 
+                UserID = controller.CurrentUser.Id.GetValueOrDefault(),
+                FriendId = user.Id.GetValueOrDefault(),
+            };
+
+            controller.CurrentUser.FriendIDs.Add(friend);
+
+            controller.Model.AddFriend(friend);
 
             controller.Model.UpdateUser(controller.CurrentUser);
 

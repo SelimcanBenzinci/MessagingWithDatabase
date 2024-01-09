@@ -26,6 +26,7 @@ namespace MessagingWithDatabase
         public DbSet<Message> Messages { get; set; }
         public DbSet<GroupMessage> GroupMessages { get; set; }
         public DbSet<GroupUser> GroupUsers { get; set; }
+        public DbSet<Friend> Friends { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -47,7 +48,18 @@ namespace MessagingWithDatabase
                 {
                     item.Groups.Add(Groups.Where(x => x.Id == item2.GroupID).FirstOrDefault());
                 }
+
+
+                List<Friend> frnd = Friends.Where(x => x.UserID == item.Id).ToList();
+                foreach (Friend friend in frnd)
+                {
+                    item.FriendIDs.Add(friend);
+                }
             }
+
+            
+
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -74,16 +86,15 @@ namespace MessagingWithDatabase
         {
             List<Group> groups = Groups.ToList();
             return groups;
-
         }
 
         public List<IChatBox> GetChatBoxs()
         {
             List<IChatBox> chatBoxes = new List<IChatBox>();
 
-            foreach (int item in controller.CurrentUser.FriendIDs)
+            foreach (Friend item in controller.CurrentUser.FriendIDs)
             {
-                chatBoxes.Add(Users.Where(x => x.Id == item).FirstOrDefault());
+                chatBoxes.Add(Users.Where(x => x.Id == item.FriendId).FirstOrDefault());
             }
 
 
@@ -114,7 +125,7 @@ namespace MessagingWithDatabase
                 ImageByteArray = new byte[0],
                 Password = password,
                 Email = mail,
-                FriendIDs = new List<int>(),
+                FriendIDs = new List<Friend>(),
             };
 
             Add(user);
@@ -131,7 +142,13 @@ namespace MessagingWithDatabase
         public void UpdateUser(User usr)
         {
 
-            Users.Entry(usr).State = EntityState.Modified;
+            Update(usr);
+            SaveChanges();
+        }
+
+        public void UpdateFriend(Friend friend)
+        {
+            Update(friend);
             SaveChanges();
         }
 
@@ -155,10 +172,21 @@ namespace MessagingWithDatabase
 
         }
 
-        public void AddFriend(User user)
+        public void AddFriend(Friend user)
         {
-            controller.CurrentUser.FriendIDs.Add(user.Id.GetValueOrDefault());
-
+            List<Friend> f1 = Friends.Where(x => x.UserID == controller.CurrentUser.Id).ToList();
+            
+            foreach (Friend f2 in f1)
+            {
+                if (f2.FriendId == user.FriendId)
+                    return;
+            }
+            Friend friend = new Friend()
+            { FriendId = user.UserID,
+              UserID = user.FriendId};
+                
+            Add(friend);
+            Add(user);
             SaveChanges();
 
         }
@@ -167,9 +195,9 @@ namespace MessagingWithDatabase
         {
             List<User> nUsers = new List<User>();
 
-            foreach (int ID in controller.CurrentUser.FriendIDs)
+            foreach (Friend ID in controller.CurrentUser.FriendIDs)
             {
-                User usr = Users.Where(x => x.Id == ID).FirstOrDefault();
+                User usr = Users.Where(x => x.Id == ID.FriendId).FirstOrDefault();
                 if (usr != null) { nUsers.Add(usr); }
 
             }
@@ -180,9 +208,9 @@ namespace MessagingWithDatabase
         {
             List<User> nUsers = new List<User>(Users);
 
-            List<int> currentUsers = new List<int>(controller.CurrentUser.FriendIDs);
+            List<Friend> currentUsers = new List<Friend>(controller.CurrentUser.FriendIDs);
 
-            nUsers.RemoveAll(item => currentUsers.Any(item2 => item.Id == item2));
+            nUsers.RemoveAll(item => currentUsers.Any(item2 => item.Id == item2.FriendId));
 
             nUsers.Remove(controller.CurrentUser);
 
