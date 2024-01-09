@@ -58,21 +58,6 @@ namespace MessagingWithDatabase
                .HasMany(e => e.Users)
                .WithMany(e => e.Groups)
                .UsingEntity<GroupUser>();
-
-            //modelBuilder.Entity<GroupUser>()
-            //    .HasKey(x => new { x.GroupID, x.UserID });
-
-            //modelBuilder.Entity<GroupUser>()
-            //    .HasOne(x => x.User)
-            //    .WithMany(k => k.Groups)
-            //    .HasForeignKey(x => x.UserID);
-
-            //modelBuilder.Entity<GroupUser>()
-            //    .HasOne(x => x.Group)
-            //    .WithMany(k => k.Users)
-            //    .HasForeignKey(x => x.GroupID);
-
-            // modelBuilder.Entity<Group>().HasOne(c => c.GroupAdmin);
         }
 
         public List<User> GetUsers()
@@ -213,10 +198,10 @@ namespace MessagingWithDatabase
 
                 Group groupT = Groups.Where(x => x.Id == chat.GetID()).FirstOrDefault();
 
-                //foreach (User item in groupT.GroupUsers)
-                //{
-                //    bSeenT.Add(item, false);
-                //}
+                foreach (User item in groupT.Users)
+                {
+                    bSeenT.Add(item, false);
+                }
 
                 GroupMessage msg = new GroupMessage()
                 {
