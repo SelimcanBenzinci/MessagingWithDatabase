@@ -13,6 +13,7 @@ namespace MessagingWithDatabase
         public string GetName();
         public byte[] GetImage();
         public string GetLastMessage();
+        public User.Visibilty GetVisbilty();
 
 
         

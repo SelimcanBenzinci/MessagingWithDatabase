@@ -67,6 +67,11 @@ namespace MessagingWithDatabase
             return Id;
         }
 
+        public User.Visibilty GetVisbilty()
+        {
+            return visibilty;
+        }
+
     }
 
 

@@ -48,5 +48,8 @@ namespace MessagingWithDatabase
 
         public int? GetMessageID() { return GroupMessageID; }
 
+        public DateTime? GetDateTime()
+        { return time; }
+
     }
 }

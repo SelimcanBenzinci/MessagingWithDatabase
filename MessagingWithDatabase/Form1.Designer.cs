@@ -40,7 +40,7 @@
             this.panel1.Location = new System.Drawing.Point(379, 66);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 323);
+            this.panel1.Size = new System.Drawing.Size(428, 323);
             this.panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -54,7 +54,7 @@
             // 
             // AccountButton
             // 
-            this.AccountButton.Location = new System.Drawing.Point(794, 431);
+            this.AccountButton.Location = new System.Drawing.Point(620, 428);
             this.AccountButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AccountButton.Name = "AccountButton";
             this.AccountButton.Size = new System.Drawing.Size(104, 29);
@@ -66,7 +66,7 @@
             // 
             // CreateGroupButton
             // 
-            this.CreateGroupButton.Location = new System.Drawing.Point(668, 431);
+            this.CreateGroupButton.Location = new System.Drawing.Point(492, 428);
             this.CreateGroupButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CreateGroupButton.Name = "CreateGroupButton";
             this.CreateGroupButton.Size = new System.Drawing.Size(107, 29);
@@ -78,7 +78,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(562, 431);
+            this.button1.Location = new System.Drawing.Point(379, 428);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 29);
             this.button1.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 469);
+            this.ClientSize = new System.Drawing.Size(823, 469);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CreateGroupButton);
             this.Controls.Add(this.AccountButton);

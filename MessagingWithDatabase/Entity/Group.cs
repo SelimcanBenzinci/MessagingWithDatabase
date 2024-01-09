@@ -47,6 +47,11 @@ namespace MessagingWithDatabase
             return Id;
         }
 
+        public User.Visibilty GetVisbilty()
+        {
+            return User.Visibilty.Herkes;
+        }
+
     }
 
 

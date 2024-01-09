@@ -26,9 +26,31 @@ namespace MessagingWithDatabase
             InitializeComponent();
             controller = cntrl;
             TargetChat = chatBox;
-            button1.Text = chatBox.GetName();
-            statusLabel.Text = chatBox.GetLastMessage();
-            byte[] ImageByteArray = chatBox.GetImage();
+            byte[] ImageByteArray = new byte[0];
+
+            var gg = chatBox.GetVisbilty();
+
+            switch (gg)
+            {
+                case User.Visibilty.Herkes:
+                    button1.Text = chatBox.GetName();
+                    statusLabel.Text = chatBox.GetLastMessage();
+                    ImageByteArray = chatBox.GetImage();
+                    break;
+                case User.Visibilty.Ekli:
+                    button1.Text = chatBox.GetName();
+                    statusLabel.Text = chatBox.GetLastMessage();
+                    ImageByteArray = chatBox.GetImage();
+                    break;
+                case User.Visibilty.Hickimse:
+                    button1.Text = chatBox.GetName();
+                    statusLabel.Text = "Profil Gizli";
+                    break;
+                default:
+                    break;
+            }
+
+            
 
             if (ImageByteArray.Length != 0)
             {

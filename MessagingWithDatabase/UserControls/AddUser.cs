@@ -25,10 +25,22 @@ namespace MessagingWithDatabase
             InitializeComponent();
             controller = cnrl;
             user = usr;
+            byte[] ImageByteArray = new byte[0];
 
-            NameLabel.Text = user.Name;
-            StatusLabel.Text = user.Status;
-            byte[] ImageByteArray = user.ImageByteArray;
+            switch (usr.visibilty)
+            {
+                case User.Visibilty.Herkes:
+                    NameLabel.Text = user.Name;
+                    StatusLabel.Text = user.Status;
+                    ImageByteArray = user.ImageByteArray;
+                    break;
+                case User.Visibilty.Hickimse:
+                    NameLabel.Text = "Profil Gizli";
+                    StatusLabel.Text = "";
+                    break;
+                default:
+                    break;
+            }
 
             if (ImageByteArray.Length != 0)
             {

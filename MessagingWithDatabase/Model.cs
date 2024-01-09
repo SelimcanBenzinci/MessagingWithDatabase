@@ -299,16 +299,14 @@ namespace MessagingWithDatabase
 
             if (currentChat.GetType() == typeof(User))
             {
-                foreach (Message item in Messages)
-                {
-                    if (item.SenderUserID == currentChat.GetID() || item.ReceiverUserID == currentChat.GetID())
-                    {
-                        if (item.SenderUserID == currentChat.GetID() || item.ReceiverUserID == currentChat.GetID())
-                        {
-                            msgs.Add(item);
-                        }
-                    }
-                }
+                List<Message> msg1 = Messages.Where(x => x.SenderUserID == controller.CurrentUser.Id).ToList();
+                List<Message> msg2 = msg1.Where(x => x.ReceiverUserID == currentChat.GetID()).ToList();
+                msgs.AddRange(msg2);
+
+                List<Message> msg3 = Messages.Where(x => x.ReceiverUserID == controller.CurrentUser.Id).ToList();
+                List<Message> msg4 = msg3.Where(x => x.SenderUserID == currentChat.GetID()).ToList();
+                msgs.AddRange(msg4);
+
             }
             else
             {
@@ -321,7 +319,9 @@ namespace MessagingWithDatabase
                 }
             }
 
-            return msgs;
+            List<IMessage> gg = msgs.OrderBy(p => p.GetDateTime()).ToList();
+
+            return gg;
         }
 
     }

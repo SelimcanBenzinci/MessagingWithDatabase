@@ -41,5 +41,8 @@ namespace MessagingWithDatabase
 
         public int? GetMessageID()
         { return MessageID; }
+
+        public DateTime? GetDateTime()
+            { return time; }
     }
 }

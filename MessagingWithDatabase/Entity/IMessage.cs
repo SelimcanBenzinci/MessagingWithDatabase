@@ -17,5 +17,7 @@ namespace MessagingWithDatabase
 
         public int? GetMessageID();
 
+        public DateTime? GetDateTime();
+
     }
 }
