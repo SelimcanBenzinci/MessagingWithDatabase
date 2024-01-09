@@ -1,4 +1,4 @@
-﻿namespace MessagingWithDatabase.UserControls
+﻿namespace MessagingWithDatabase
 {
     partial class AddUser
     {

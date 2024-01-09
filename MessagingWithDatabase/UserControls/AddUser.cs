@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MessagingWithDatabase.UserControls
+namespace MessagingWithDatabase
 {
     public partial class AddUser : UserControl
     {
@@ -45,7 +45,12 @@ namespace MessagingWithDatabase.UserControls
         private void AddButton_Click(object sender, EventArgs e)
         {
             controller.CurrentUser.FriendIDs.Add(user.Id.GetValueOrDefault());
-            controller.Model.UpdateUser(user);
+
+            controller.Model.UpdateUser(controller.CurrentUser);
+
+            this.Parent.Controls.Remove(this);
+
+            controller.populateChatBoxs(controller.Model.GetChatBoxs());
         }
     }
 }

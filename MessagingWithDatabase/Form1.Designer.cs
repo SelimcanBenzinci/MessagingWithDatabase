@@ -62,6 +62,7 @@
             this.AccountButton.Text = "Hesap Ayarları";
             this.AccountButton.UseVisualStyleBackColor = true;
             this.AccountButton.Visible = false;
+            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
             // 
             // CreateGroupButton
             // 
@@ -73,6 +74,7 @@
             this.CreateGroupButton.Text = "Grup Oluştur";
             this.CreateGroupButton.UseVisualStyleBackColor = true;
             this.CreateGroupButton.Visible = false;
+            this.CreateGroupButton.Click += new System.EventHandler(this.CreateGroupButton_Click_1);
             // 
             // button1
             // 

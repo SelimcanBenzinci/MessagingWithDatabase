@@ -20,16 +20,14 @@ namespace MessagingWithDatabase
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-
-            AccountSetting accountSetting = new AccountSetting(controller);
-
-            panel1.Controls.Add(accountSetting);
+            UsersListView usersListView = new UsersListView(controller);
+            panel1.Controls.Add(usersListView);
         }
 
-        private void CreateGroupButton_Click(object sender, EventArgs e)
+        private void CreateGroupButton_Click_1(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
 
@@ -38,9 +36,13 @@ namespace MessagingWithDatabase
             panel1.Controls.Add(createGroup);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void AccountButton_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
 
+            AccountSetting accountSetting = new AccountSetting(controller);
+
+            panel1.Controls.Add(accountSetting);
         }
     }
 }

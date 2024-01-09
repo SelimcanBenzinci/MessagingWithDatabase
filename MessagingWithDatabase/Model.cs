@@ -130,7 +130,8 @@ namespace MessagingWithDatabase
 
         public void UpdateUser(User usr)
         {
-            Update(usr);
+
+            Users.Entry(usr).State = EntityState.Modified;
             SaveChanges();
         }
 
@@ -172,6 +173,19 @@ namespace MessagingWithDatabase
                 if (usr != null) { nUsers.Add(usr); }
 
             }
+            return nUsers;
+        }
+
+        public List<User> GetNonFriends()
+        {
+            List<User> nUsers = new List<User>(Users);
+
+            List<int> currentUsers = new List<int>(controller.CurrentUser.FriendIDs);
+
+            nUsers.RemoveAll(item => currentUsers.Any(item2 => item.Id == item2));
+
+            nUsers.Remove(controller.CurrentUser);
+
             return nUsers;
         }
 

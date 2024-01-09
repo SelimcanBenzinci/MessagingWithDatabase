@@ -47,11 +47,6 @@ namespace MessagingWithDatabase
 
         public List<Group> Groups { get; set; } = new();
 
-
-
-
-
-
         //Interface Methods
         public string GetName()
         {
@@ -72,10 +67,7 @@ namespace MessagingWithDatabase
             return Id;
         }
 
-       
-
     }
-
 
 
 }
