@@ -48,9 +48,9 @@ namespace MessagingWithDatabase
 
             int cntMsg = 0;
 
-            
+
             cntMsg = controller.Model.GetIMessages(controller.CurrentChat).Count();
-          
+
 
             if (cntMessage == cntMsg)
             {
@@ -68,12 +68,11 @@ namespace MessagingWithDatabase
             cntMessage = cntMsg;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             controller.Model.SendMessage(controller.CurrentChat, textBox1.Text);
 
             textBox1.Text = string.Empty;
         }
-
     }
 }

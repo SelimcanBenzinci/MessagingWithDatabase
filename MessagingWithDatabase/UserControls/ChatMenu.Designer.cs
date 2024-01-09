@@ -28,51 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            textBox1 = new TextBox();
+            button1 = new Button();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 242);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 23);
-            this.textBox1.TabIndex = 0;
+            textBox1.Location = new Point(22, 323);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(266, 27);
+            textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(257, 240);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Gönder";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(294, 320);
+            button1.Name = "button1";
+            button1.Size = new Size(78, 29);
+            button1.TabIndex = 1;
+            button1.Text = "Gönder";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 13);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(306, 205);
-            this.flowLayoutPanel1.TabIndex = 2;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(22, 17);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(350, 273);
+            flowLayoutPanel1.TabIndex = 2;
             // 
             // ChatMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "ChatMenu";
-            this.Size = new System.Drawing.Size(338, 268);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(button1);
+            Controls.Add(textBox1);
+            Name = "ChatMenu";
+            Size = new Size(386, 357);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
