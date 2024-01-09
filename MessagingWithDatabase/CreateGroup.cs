@@ -52,12 +52,12 @@ namespace MessagingWithDatabase
             controller.GroupUsers.Add(controller.CurrentUser);
             Group group = new Group()
             {
-                GroupID = null,
+                Id = null,
                 Name = NameText.Text,
                 Description = DescText.Text,
                 ImageByteArray = imageN,
-                GroupUsers = controller.GroupUsers,
-                GroupAdmin = controller.CurrentUser,
+                Users = controller.GroupUsers.ToList(),
+                //GroupAdmin = controller.CurrentUser,
                 CreationTime = DateTime.Now,
             };
 

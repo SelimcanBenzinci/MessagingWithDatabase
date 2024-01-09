@@ -9,11 +9,11 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MessagingWithDatabase
 {
- 
+
     public class Group : IChatBox
     {
         [Key]
-        public int? GroupID { get; set; }
+        public int? Id { get; set; }
 
         public string Name { get; set; }
 
@@ -21,12 +21,11 @@ namespace MessagingWithDatabase
 
         public byte[] ImageByteArray { get; set; }
 
-        public ICollection<User> GroupUsers { get; set; }
+        public List<User> Users { get; set; } = new();
 
-        public User GroupAdmin { get; set; }
+        //public User GroupAdmin { get; set; }
 
         public DateTime CreationTime { get; set; }
-
 
         //Interface Methods
         public string GetName()
@@ -45,8 +44,19 @@ namespace MessagingWithDatabase
 
         public int? GetID()
         {
-            return GroupID;
+            return Id;
         }
 
     }
+
+
+    public class GroupUser
+    {
+
+        public int? GroupID { get; set; }
+
+        public int? UserID { get; set; }
+
+    }
+
 }

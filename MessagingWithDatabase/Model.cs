@@ -16,6 +16,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace MessagingWithDatabase
 {
+
     public class Model : DbContext
     {
         public Controller controller { get; set; }
@@ -24,10 +25,11 @@ namespace MessagingWithDatabase
         public DbSet<Group> Groups { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<GroupMessage> GroupMessages { get; set; }
+        public DbSet<GroupUser> GroupUsers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=asd;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=Esad123:;TrustServerCertificate=True;MultipleActiveResultSets=True;");
         }
 
         public Model()
@@ -38,14 +40,39 @@ namespace MessagingWithDatabase
         public Model(Controller cntrl)
         {
             controller = cntrl;
+            foreach (User item in Users)
+            {
+                List<GroupUser> grp = GroupUsers.Where(x => x.UserID == item.Id).ToList();
+                foreach (GroupUser item2 in grp)
+                {
+                    item.Groups.Add(Groups.Where(x => x.Id == item2.GroupID).FirstOrDefault());
+                }
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().OwnsOne(x => x.FriendIDs);
-            modelBuilder.Entity<Group>().HasMany(x => x.GroupUsers);
 
-            modelBuilder.Entity<Group>().HasOne(c => c.GroupAdmin);
+            modelBuilder.Entity<Group>()
+               .HasMany(e => e.Users)
+               .WithMany(e => e.Groups)
+               .UsingEntity<GroupUser>();
+
+            //modelBuilder.Entity<GroupUser>()
+            //    .HasKey(x => new { x.GroupID, x.UserID });
+
+            //modelBuilder.Entity<GroupUser>()
+            //    .HasOne(x => x.User)
+            //    .WithMany(k => k.Groups)
+            //    .HasForeignKey(x => x.UserID);
+
+            //modelBuilder.Entity<GroupUser>()
+            //    .HasOne(x => x.Group)
+            //    .WithMany(k => k.Users)
+            //    .HasForeignKey(x => x.GroupID);
+
+            // modelBuilder.Entity<Group>().HasOne(c => c.GroupAdmin);
         }
 
         public List<User> GetUsers()
@@ -55,7 +82,7 @@ namespace MessagingWithDatabase
         }
         public User GetUser(int? id)
         {
-            return Users.Where(x => x.UserID == id).FirstOrDefault();
+            return Users.Where(x => x.Id == id).FirstOrDefault();
         }
 
         public List<Group> GetGroups()
@@ -71,15 +98,15 @@ namespace MessagingWithDatabase
 
             foreach (int item in controller.CurrentUser.FriendIDs)
             {
-                chatBoxes.Add(Users.Where(x => x.UserID == item).FirstOrDefault());
+                chatBoxes.Add(Users.Where(x => x.Id == item).FirstOrDefault());
             }
 
 
             foreach (Group item in Groups)
             {
-                if (item.GroupUsers != null)
+                if (item.Users != null)
                 {
-                    if (item.GroupUsers.Contains(controller.CurrentUser))
+                    if (item.Users.Contains(controller.CurrentUser))
                     {
                         chatBoxes.Add(item);
                     }
@@ -95,7 +122,7 @@ namespace MessagingWithDatabase
 
             User user = new User()
             {
-                UserID = null,
+                Id = null,
                 Name = string.Empty,
                 Status = string.Empty,
                 visibilty = Visibilty.Herkes,
@@ -113,6 +140,7 @@ namespace MessagingWithDatabase
         {
             Add(group);
             SaveChanges();
+             
         }
 
         public void UpdateUser(User usr)
@@ -143,7 +171,7 @@ namespace MessagingWithDatabase
 
         public void AddFriend(User user)
         {
-            controller.CurrentUser.FriendIDs.Add(user.UserID.GetValueOrDefault());
+            controller.CurrentUser.FriendIDs.Add(user.Id.GetValueOrDefault());
 
             SaveChanges();
 
@@ -155,7 +183,7 @@ namespace MessagingWithDatabase
 
             foreach (int ID in controller.CurrentUser.FriendIDs)
             {
-                User usr = Users.Where(x => x.UserID == ID).FirstOrDefault();
+                User usr = Users.Where(x => x.Id == ID).FirstOrDefault();
                 if (usr != null) { nUsers.Add(usr); }
 
             }
@@ -170,7 +198,7 @@ namespace MessagingWithDatabase
                 {
                     MessageID = null,
                     MessageText = message,
-                    SenderUserID = controller.CurrentUser.UserID,
+                    SenderUserID = controller.CurrentUser.Id,
                     ReceiverUserID = chat.GetID(),
                     time = DateTime.Now,
                     bSeen = false,
@@ -183,17 +211,17 @@ namespace MessagingWithDatabase
             {
                 Dictionary<User, bool> bSeenT = new Dictionary<User, bool>();
 
-                Group groupT = Groups.Where(x => x.GroupID == chat.GetID()).FirstOrDefault();
+                Group groupT = Groups.Where(x => x.Id == chat.GetID()).FirstOrDefault();
 
-                foreach (User item in groupT.GroupUsers)
-                {
-                    bSeenT.Add(item, false);
-                }
+                //foreach (User item in groupT.GroupUsers)
+                //{
+                //    bSeenT.Add(item, false);
+                //}
 
                 GroupMessage msg = new GroupMessage()
                 {
                     GroupMessageID = null,
-                    SenderUserID = controller.CurrentUser.UserID,
+                    SenderUserID = controller.CurrentUser.Id,
                     group = groupT,
                     MessageText = message,
                     time = DateTime.Now,
@@ -211,9 +239,9 @@ namespace MessagingWithDatabase
             List<Message> msgs = new List<Message>();
             foreach (Message item in Messages)
             {
-                if (item.SenderUserID == currentUser.UserID || item.ReceiverUserID == currentUser.UserID)
+                if (item.SenderUserID == currentUser.Id || item.ReceiverUserID == currentUser.Id)
                 {
-                    if (item.SenderUserID == targetUser.UserID || item.ReceiverUserID == targetUser.UserID)
+                    if (item.SenderUserID == targetUser.Id || item.ReceiverUserID == targetUser.Id)
                     {
                         msgs.Add(item);
                     }
@@ -259,7 +287,7 @@ namespace MessagingWithDatabase
             {
                 foreach (GroupMessage item in GroupMessages)
                 {
-                    if (item.group.GroupID == currentChat.GetID())
+                    if (item.group.Id == currentChat.GetID())
                     {
                         msgs.Add(item);
                     }
@@ -270,4 +298,5 @@ namespace MessagingWithDatabase
         }
 
     }
+
 }

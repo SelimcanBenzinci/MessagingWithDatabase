@@ -15,6 +15,7 @@ namespace MessagingWithDatabase
 
     public class User : IChatBox
     {
+
         public enum Visibilty
         {
             Herkes = 0,
@@ -23,7 +24,7 @@ namespace MessagingWithDatabase
         }
 
         [Key]
-        public int? UserID { get; set; }
+        public int? Id { get; set; }
 
         public string Name { get; set; }
 
@@ -44,9 +45,11 @@ namespace MessagingWithDatabase
 
         public List<int> FriendIDs { get; set; }
 
+        public List<Group> Groups { get; set; } = new();
 
 
-        
+
+
 
 
         //Interface Methods
@@ -66,7 +69,7 @@ namespace MessagingWithDatabase
 
         public int? GetID() 
         {
-            return UserID;
+            return Id;
         }
 
        
