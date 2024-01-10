@@ -37,27 +37,24 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(332, 50);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(379, 67);
             panel1.Name = "panel1";
-            panel1.Size = new Size(541, 446);
+            panel1.Size = new Size(618, 594);
             panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(44, 20);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            flowLayoutPanel1.Location = new Point(50, 27);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(243, 280);
+            flowLayoutPanel1.Size = new Size(278, 373);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // AccountButton
             // 
-            AccountButton.Location = new Point(530, 500);
-            AccountButton.Margin = new Padding(3, 2, 3, 2);
+            AccountButton.Location = new Point(606, 667);
             AccountButton.Name = "AccountButton";
-            AccountButton.Size = new Size(91, 22);
+            AccountButton.Size = new Size(104, 29);
             AccountButton.TabIndex = 2;
             AccountButton.Text = "Hesap Ayarları";
             AccountButton.UseVisualStyleBackColor = true;
@@ -66,10 +63,9 @@
             // 
             // CreateGroupButton
             // 
-            CreateGroupButton.Location = new Point(431, 500);
-            CreateGroupButton.Margin = new Padding(3, 2, 3, 2);
+            CreateGroupButton.Location = new Point(493, 667);
             CreateGroupButton.Name = "CreateGroupButton";
-            CreateGroupButton.Size = new Size(94, 22);
+            CreateGroupButton.Size = new Size(107, 29);
             CreateGroupButton.TabIndex = 3;
             CreateGroupButton.Text = "Grup Oluştur";
             CreateGroupButton.UseVisualStyleBackColor = true;
@@ -78,10 +74,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(379, 667);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(382, 662);
+            button1.Margin = new Padding(3, 5, 3, 5);
             button1.Name = "button1";
-            button1.Size = new Size(89, 29);
+            button1.Size = new Size(102, 39);
             button1.TabIndex = 4;
             button1.Text = "Kişi Ekle";
             button1.UseVisualStyleBackColor = true;
@@ -89,16 +85,15 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
-            ClientSize = new Size(1010, 625);
+            ClientSize = new Size(1154, 970);
             Controls.Add(button1);
             Controls.Add(CreateGroupButton);
             Controls.Add(AccountButton);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
