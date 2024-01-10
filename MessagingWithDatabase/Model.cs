@@ -10,7 +10,7 @@ using static MessagingWithDatabase.User;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.ApplicationServices;
 using Microsoft.IdentityModel.Tokens;
-
+//veritabanı
 //add-migration CreateMessagingWithDB
 //update-database –verbose
 
@@ -30,7 +30,7 @@ namespace MessagingWithDatabase
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=asd;TrustServerCertificate=True;MultipleActiveResultSets=True;");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=MessagingWithDB;User Id=sa; Password=ask12345;TrustServerCertificate=True;MultipleActiveResultSets=True;");
         }
 
         public Model()
