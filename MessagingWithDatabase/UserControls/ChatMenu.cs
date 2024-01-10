@@ -157,251 +157,179 @@ namespace MessagingWithDatabase
 
             }
         }
-
-
-
-        private void button4_Click_1(object sender, EventArgs e)
+        private void button26_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
+
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😅";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void button27_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
+
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😎";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button28_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
+
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😍";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button29_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😡";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button30_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
+
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😃";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void button31_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😱";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void button32_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 🤣";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void button33_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😏";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button34_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😊";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button35_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 🤩";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button36_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😄";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button37_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😦";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button38_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 🥰";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button39_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😔";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void button40_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 🤬";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void button41_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 🤗";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button42_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😈";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button21_Click(object sender, EventArgs e)
+        private void button43_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😇";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void button44_Click(object sender, EventArgs e)
         {
-            // Emojiyi ekleyeceğiniz metni alın
             string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
             metin += " 😋";
 
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
             textBox1.Text = metin;
         }
-
-        private void button23_Click(object sender, EventArgs e)
-        {
-            // Emojiyi ekleyeceğiniz metni alın
-            string metin = textBox1.Text;
-
-            // Emojiyi ekleyin
-            metin += " 🤔";
-
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
-            textBox1.Text = metin;
-        }
-
-
-
-
     }
 }
