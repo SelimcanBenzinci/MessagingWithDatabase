@@ -9,6 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\pngwing.com.png" />
+    <None Remove="Resources\pngwing.com2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\pngwing.com.png" />
+    <Resource Include="Resources\pngwing.com2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>

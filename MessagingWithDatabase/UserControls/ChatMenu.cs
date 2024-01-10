@@ -30,10 +30,9 @@ namespace MessagingWithDatabase
         public ChatMenu()
         {
             InitializeComponent();
-            InitializePictureBoxes();
-            InitializePictureBoxes1();
-            flowLayoutPanel2.Visible = false;
-            flowLayoutPanel3.Visible = false;
+
+            flowLayoutPanel2.Visible = true;
+
 
         }
 
@@ -96,66 +95,11 @@ namespace MessagingWithDatabase
         //emoji
         private void button2_Click_1(object sender, EventArgs e)
         {
-            flowLayoutPanel2.Visible = true;
-            flowLayoutPanel3.Visible = false;
+            flowLayoutPanel2.Visible = !flowLayoutPanel2.Visible;
+
         }
 
-        private void InitializePictureBoxes()
-        {
-            emojiPictureBoxes = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4,pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14
-            ,pictureBox15,pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24,pictureBox25,pictureBox26};
 
-            foreach (PictureBox pictureBox in emojiPictureBoxes)
-            {
-                if (pictureBox != null)
-                {
-                    pictureBox.Click += EmojiPictureBox_Click;
-                    pictureBox.Enabled = true;
-                }
-            }
-        }
-        private void EmojiPictureBox_Click(object? sender, EventArgs e)
-        {
-            if (sender is PictureBox clickedPictureBox && clickedPictureBox.Image != null)
-            {
-                Clipboard.SetImage(clickedPictureBox.Image);
-                textBox1.Paste();
-                textBox1.Focus();
-                textBox1.SelectionStart = textBox1.Text.Length;
-                textBox1.SelectionLength = 0;
-            }
-        }
-
-        //sticker
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            flowLayoutPanel3.Visible = true;
-            flowLayoutPanel2.Visible = false;
-        }
-        private void InitializePictureBoxes1()
-        {
-            stickerPictureBoxes = new PictureBox[] { pictureBox27, pictureBox28, pictureBox29, pictureBox30, pictureBox31, pictureBox32, pictureBox33 };
-
-            foreach (PictureBox pictureBox in stickerPictureBoxes)
-            {
-                if (pictureBox != null)
-                {
-                    pictureBox.Click += StickerPictureBox_Click;
-                    pictureBox.Enabled = true;
-                }
-            }
-        }
-        private void StickerPictureBox_Click(object? sender, EventArgs e)
-        {
-            if (sender is PictureBox clickedPictureBox && clickedPictureBox.Image != null)
-            {
-                Clipboard.SetImage(clickedPictureBox.Image);
-                textBox1.Paste();
-                textBox1.Focus();
-                textBox1.SelectionStart = textBox1.Text.Length;
-                textBox1.SelectionLength = 0;
-            }
-        }
         //bildirim
         private void ShowMessageReceivedNotification(User sender, string messageText)
         {
@@ -188,7 +132,7 @@ namespace MessagingWithDatabase
             notificationPanel.Location = new Point(340, 40);
 
             zilPictureBox = new PictureBox();
-            zilPictureBox.Image = Properties.Resources.bildirim; 
+            zilPictureBox.Image = Properties.Resources.bildirim;
             zilPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             zilPictureBox.Click += (s, e) => notificationPanel.Visible = !notificationPanel.Visible;
             Controls.Add(zilPictureBox);
@@ -214,7 +158,271 @@ namespace MessagingWithDatabase
             }
         }
 
-       
+
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😅";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😎";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😍";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😡";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😃";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😱";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤣";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😏";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😊";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤩";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😄";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😦";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🥰";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😔";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤬";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤗";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😈";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😇";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 😋";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤔";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🤪";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            // Emojiyi ekleyeceğiniz metni alın
+            string metin = textBox1.Text;
+
+            // Emojiyi ekleyin
+            metin += " 🥹";
+
+            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
+            textBox1.Text = metin;
+        }
 
 
     }

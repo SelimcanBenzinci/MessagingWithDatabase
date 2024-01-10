@@ -499,5 +499,93 @@ namespace MessagingWithDatabase.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap pngwing1
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__1_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__2_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__3_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__4_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__5_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__6_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__7_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__8_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__9_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap pngwing_com__10_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("pngwing_com__10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
