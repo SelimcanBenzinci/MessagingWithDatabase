@@ -78,7 +78,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(336, 497);
+            button1.Location = new Point(379, 667);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(89, 29);
             button1.TabIndex = 4;
@@ -91,7 +92,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
-            ClientSize = new Size(1029, 546);
+            ClientSize = new Size(1010, 625);
             Controls.Add(button1);
             Controls.Add(CreateGroupButton);
             Controls.Add(AccountButton);

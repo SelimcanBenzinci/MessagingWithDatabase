@@ -60,18 +60,16 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(19, 242);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Location = new Point(22, 323);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(233, 23);
+            textBox1.Size = new Size(266, 27);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(257, 240);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(294, 320);
             button1.Name = "button1";
-            button1.Size = new Size(68, 22);
+            button1.Size = new Size(78, 29);
             button1.TabIndex = 1;
             button1.Text = "Gönder";
             button1.UseVisualStyleBackColor = true;
@@ -80,285 +78,457 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(19, 13);
-            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            flowLayoutPanel1.Location = new Point(22, 17);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(306, 205);
+            flowLayoutPanel1.Size = new Size(350, 273);
             flowLayoutPanel1.TabIndex = 2;
             // 
             // button2
             // 
-            button2.Image = Properties.Resources.pngwing_com5;
-            button2.Location = new Point(19, 291);
+            button2.Location = new Point(22, 388);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(41, 37);
+            button2.Size = new Size(47, 43);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
             // 
             // button4
             // 
-            button4.BackColor = SystemColors.Control;
-            button4.Image = Properties.Resources.pngwing_com;
-            button4.Location = new Point(3, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(48, 35);
-            button4.TabIndex = 9;
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click_1;
+            button3.Location = new Point(22, 452);
+            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(47, 43);
+            button3.TabIndex = 4;
+            button3.Text = "button3";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
             // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.AutoScroll = true;
-            flowLayoutPanel2.Controls.Add(button4);
-            flowLayoutPanel2.Controls.Add(button5);
-            flowLayoutPanel2.Controls.Add(button6);
-            flowLayoutPanel2.Controls.Add(button7);
-            flowLayoutPanel2.Controls.Add(button8);
-            flowLayoutPanel2.Controls.Add(button9);
-            flowLayoutPanel2.Controls.Add(button10);
-            flowLayoutPanel2.Controls.Add(button11);
-            flowLayoutPanel2.Controls.Add(button12);
-            flowLayoutPanel2.Controls.Add(button13);
-            flowLayoutPanel2.Controls.Add(button14);
-            flowLayoutPanel2.Controls.Add(button15);
-            flowLayoutPanel2.Controls.Add(button16);
-            flowLayoutPanel2.Controls.Add(button17);
-            flowLayoutPanel2.Controls.Add(button18);
-            flowLayoutPanel2.Controls.Add(button19);
-            flowLayoutPanel2.Controls.Add(button20);
-            flowLayoutPanel2.Controls.Add(button21);
-            flowLayoutPanel2.Controls.Add(button22);
-            flowLayoutPanel2.Controls.Add(button23);
-            flowLayoutPanel2.Controls.Add(button24);
-            flowLayoutPanel2.Controls.Add(button25);
-            flowLayoutPanel2.Location = new Point(66, 291);
+            flowLayoutPanel2.Controls.Add(pictureBox1);
+            flowLayoutPanel2.Controls.Add(pictureBox2);
+            flowLayoutPanel2.Controls.Add(pictureBox3);
+            flowLayoutPanel2.Controls.Add(pictureBox4);
+            flowLayoutPanel2.Controls.Add(pictureBox5);
+            flowLayoutPanel2.Controls.Add(pictureBox6);
+            flowLayoutPanel2.Controls.Add(pictureBox7);
+            flowLayoutPanel2.Controls.Add(pictureBox8);
+            flowLayoutPanel2.Controls.Add(pictureBox9);
+            flowLayoutPanel2.Controls.Add(pictureBox10);
+            flowLayoutPanel2.Controls.Add(pictureBox11);
+            flowLayoutPanel2.Controls.Add(pictureBox12);
+            flowLayoutPanel2.Controls.Add(pictureBox13);
+            flowLayoutPanel2.Controls.Add(pictureBox14);
+            flowLayoutPanel2.Controls.Add(pictureBox15);
+            flowLayoutPanel2.Controls.Add(pictureBox16);
+            flowLayoutPanel2.Controls.Add(pictureBox17);
+            flowLayoutPanel2.Controls.Add(pictureBox18);
+            flowLayoutPanel2.Controls.Add(pictureBox19);
+            flowLayoutPanel2.Controls.Add(pictureBox20);
+            flowLayoutPanel2.Controls.Add(pictureBox21);
+            flowLayoutPanel2.Controls.Add(pictureBox22);
+            flowLayoutPanel2.Controls.Add(pictureBox23);
+            flowLayoutPanel2.Controls.Add(pictureBox24);
+            flowLayoutPanel2.Controls.Add(pictureBox25);
+            flowLayoutPanel2.Location = new Point(90, 388);
+            flowLayoutPanel2.Margin = new Padding(3, 4, 3, 4);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(237, 119);
-            flowLayoutPanel2.TabIndex = 10;
+            flowLayoutPanel2.Size = new Size(229, 133);
+            flowLayoutPanel2.TabIndex = 5;
             // 
             // button5
             // 
-            button5.Image = Properties.Resources.pngwing_com2;
-            button5.Location = new Point(57, 3);
-            button5.Name = "button5";
-            button5.Size = new Size(48, 35);
-            button5.TabIndex = 10;
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click_1;
+            pictureBox1.Image = Properties.Resources.pngwing_com;
+            pictureBox1.Location = new Point(3, 4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(35, 35);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // button6
             // 
-            button6.Image = Properties.Resources.pngwing_com3;
-            button6.Location = new Point(111, 3);
-            button6.Name = "button6";
-            button6.Size = new Size(48, 35);
-            button6.TabIndex = 11;
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += button6_Click;
+            pictureBox2.Image = Properties.Resources.pngwing_com2;
+            pictureBox2.Location = new Point(44, 4);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(35, 35);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // button7
             // 
-            button7.Image = Properties.Resources.pngwing_com4;
-            button7.Location = new Point(165, 3);
-            button7.Name = "button7";
-            button7.Size = new Size(48, 35);
-            button7.TabIndex = 12;
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += button7_Click;
+            pictureBox3.Image = Properties.Resources.pngwing_com3;
+            pictureBox3.Location = new Point(85, 4);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(35, 35);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
             // 
             // button8
             // 
-            button8.Image = Properties.Resources.pngwing_com5;
-            button8.Location = new Point(3, 44);
-            button8.Name = "button8";
-            button8.Size = new Size(48, 35);
-            button8.TabIndex = 13;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button8_Click;
+            pictureBox4.Image = Properties.Resources.pngwing_com4;
+            pictureBox4.Location = new Point(126, 4);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(35, 35);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
             // 
             // button9
             // 
-            button9.Image = Properties.Resources.pngwing_com6;
-            button9.Location = new Point(57, 44);
-            button9.Name = "button9";
-            button9.Size = new Size(48, 35);
-            button9.TabIndex = 14;
-            button9.UseVisualStyleBackColor = true;
-            button9.Click += button9_Click;
+            pictureBox5.Image = Properties.Resources.pngwing_com5;
+            pictureBox5.Location = new Point(167, 4);
+            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(35, 35);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 4;
+            pictureBox5.TabStop = false;
             // 
             // button10
             // 
-            button10.Image = Properties.Resources.pngwing_com7;
-            button10.Location = new Point(111, 44);
-            button10.Name = "button10";
-            button10.Size = new Size(48, 35);
-            button10.TabIndex = 15;
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            pictureBox6.Image = Properties.Resources.pngwing_com6;
+            pictureBox6.Location = new Point(3, 47);
+            pictureBox6.Margin = new Padding(3, 4, 3, 4);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(35, 35);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 5;
+            pictureBox6.TabStop = false;
             // 
             // button11
             // 
-            button11.Image = Properties.Resources.pngwing_com8;
-            button11.Location = new Point(165, 44);
-            button11.Name = "button11";
-            button11.Size = new Size(48, 35);
-            button11.TabIndex = 16;
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += button11_Click;
+            pictureBox7.Image = Properties.Resources.pngwing_com7;
+            pictureBox7.Location = new Point(44, 47);
+            pictureBox7.Margin = new Padding(3, 4, 3, 4);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(35, 35);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 6;
+            pictureBox7.TabStop = false;
             // 
             // button12
             // 
-            button12.Image = Properties.Resources.pngwing_com9;
-            button12.Location = new Point(3, 85);
-            button12.Name = "button12";
-            button12.Size = new Size(48, 35);
-            button12.TabIndex = 17;
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
+            pictureBox8.Image = Properties.Resources.pngwing_com8;
+            pictureBox8.Location = new Point(85, 47);
+            pictureBox8.Margin = new Padding(3, 4, 3, 4);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(35, 35);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 7;
+            pictureBox8.TabStop = false;
             // 
             // button13
             // 
-            button13.Image = Properties.Resources.pngwing_com10;
-            button13.Location = new Point(57, 85);
-            button13.Name = "button13";
-            button13.Size = new Size(48, 35);
-            button13.TabIndex = 18;
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += button13_Click;
+            pictureBox9.Image = Properties.Resources.pngwing_com9;
+            pictureBox9.Location = new Point(126, 47);
+            pictureBox9.Margin = new Padding(3, 4, 3, 4);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(35, 35);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 8;
+            pictureBox9.TabStop = false;
             // 
             // button14
             // 
-            button14.Image = Properties.Resources.pngwing_com11;
-            button14.Location = new Point(111, 85);
-            button14.Name = "button14";
-            button14.Size = new Size(48, 35);
-            button14.TabIndex = 19;
-            button14.UseVisualStyleBackColor = true;
-            button14.Click += button14_Click;
+            pictureBox10.Image = Properties.Resources.pngwing_com10;
+            pictureBox10.Location = new Point(167, 47);
+            pictureBox10.Margin = new Padding(3, 4, 3, 4);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(35, 35);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 9;
+            pictureBox10.TabStop = false;
             // 
             // button15
             // 
-            button15.Image = Properties.Resources.pngwing_com12;
-            button15.Location = new Point(165, 85);
-            button15.Name = "button15";
-            button15.Size = new Size(48, 35);
-            button15.TabIndex = 20;
-            button15.UseVisualStyleBackColor = true;
-            button15.Click += button15_Click;
+            pictureBox11.Image = Properties.Resources.pngwing_com11;
+            pictureBox11.Location = new Point(3, 90);
+            pictureBox11.Margin = new Padding(3, 4, 3, 4);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(35, 35);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 10;
+            pictureBox11.TabStop = false;
             // 
             // button16
             // 
-            button16.Image = Properties.Resources.pngwing_com13;
-            button16.Location = new Point(3, 126);
-            button16.Name = "button16";
-            button16.Size = new Size(48, 35);
-            button16.TabIndex = 21;
-            button16.UseVisualStyleBackColor = true;
-            button16.Click += button16_Click;
+            pictureBox12.Image = Properties.Resources.pngwing_com12;
+            pictureBox12.Location = new Point(44, 90);
+            pictureBox12.Margin = new Padding(3, 4, 3, 4);
+            pictureBox12.Name = "pictureBox12";
+            pictureBox12.Size = new Size(35, 35);
+            pictureBox12.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox12.TabIndex = 11;
+            pictureBox12.TabStop = false;
             // 
             // button17
             // 
-            button17.Image = Properties.Resources.pngwing_com14;
-            button17.Location = new Point(57, 126);
-            button17.Name = "button17";
-            button17.Size = new Size(48, 35);
-            button17.TabIndex = 22;
-            button17.UseVisualStyleBackColor = true;
-            button17.Click += button17_Click;
+            pictureBox13.Image = Properties.Resources.pngwing_com13;
+            pictureBox13.Location = new Point(85, 90);
+            pictureBox13.Margin = new Padding(3, 4, 3, 4);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new Size(35, 35);
+            pictureBox13.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox13.TabIndex = 12;
+            pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.Image = Properties.Resources.pngwing_com14;
+            pictureBox14.Location = new Point(126, 90);
+            pictureBox14.Margin = new Padding(3, 4, 3, 4);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new Size(35, 35);
+            pictureBox14.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox14.TabIndex = 13;
+            pictureBox14.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.Image = Properties.Resources.pngwing_com_16;
+            pictureBox15.Location = new Point(167, 90);
+            pictureBox15.Margin = new Padding(3, 4, 3, 4);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(35, 35);
+            pictureBox15.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox15.TabIndex = 14;
+            pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = Properties.Resources.pngwing_com17;
+            pictureBox16.Location = new Point(3, 133);
+            pictureBox16.Margin = new Padding(3, 4, 3, 4);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(35, 35);
+            pictureBox16.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox16.TabIndex = 15;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.Image = Properties.Resources.pngwing_com18;
+            pictureBox17.Location = new Point(44, 133);
+            pictureBox17.Margin = new Padding(3, 4, 3, 4);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(35, 35);
+            pictureBox17.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox17.TabIndex = 16;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox18
+            // 
+            pictureBox18.Image = Properties.Resources.pngwing_com19;
+            pictureBox18.Location = new Point(85, 133);
+            pictureBox18.Margin = new Padding(3, 4, 3, 4);
+            pictureBox18.Name = "pictureBox18";
+            pictureBox18.Size = new Size(35, 35);
+            pictureBox18.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox18.TabIndex = 17;
+            pictureBox18.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            pictureBox19.Image = Properties.Resources.pngwing_com20;
+            pictureBox19.Location = new Point(126, 133);
+            pictureBox19.Margin = new Padding(3, 4, 3, 4);
+            pictureBox19.Name = "pictureBox19";
+            pictureBox19.Size = new Size(35, 35);
+            pictureBox19.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox19.TabIndex = 18;
+            pictureBox19.TabStop = false;
+            // 
+            // pictureBox20
+            // 
+            pictureBox20.Image = Properties.Resources.pngwing_com21;
+            pictureBox20.Location = new Point(167, 133);
+            pictureBox20.Margin = new Padding(3, 4, 3, 4);
+            pictureBox20.Name = "pictureBox20";
+            pictureBox20.Size = new Size(35, 35);
+            pictureBox20.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox20.TabIndex = 19;
+            pictureBox20.TabStop = false;
+            // 
+            // pictureBox21
+            // 
+            pictureBox21.Image = Properties.Resources.pngwing_com22;
+            pictureBox21.Location = new Point(3, 176);
+            pictureBox21.Margin = new Padding(3, 4, 3, 4);
+            pictureBox21.Name = "pictureBox21";
+            pictureBox21.Size = new Size(35, 35);
+            pictureBox21.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox21.TabIndex = 20;
+            pictureBox21.TabStop = false;
+            // 
+            // pictureBox22
+            // 
+            pictureBox22.Image = Properties.Resources.pngwing_com24;
+            pictureBox22.Location = new Point(44, 176);
+            pictureBox22.Margin = new Padding(3, 4, 3, 4);
+            pictureBox22.Name = "pictureBox22";
+            pictureBox22.Size = new Size(35, 35);
+            pictureBox22.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox22.TabIndex = 21;
+            pictureBox22.TabStop = false;
+            // 
+            // pictureBox23
+            // 
+            pictureBox23.Image = Properties.Resources.pngwing_com25;
+            pictureBox23.Location = new Point(85, 176);
+            pictureBox23.Margin = new Padding(3, 4, 3, 4);
+            pictureBox23.Name = "pictureBox23";
+            pictureBox23.Size = new Size(35, 35);
+            pictureBox23.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox23.TabIndex = 22;
+            pictureBox23.TabStop = false;
+            // 
+            // pictureBox24
+            // 
+            pictureBox24.Image = Properties.Resources.pngwing_com26;
+            pictureBox24.Location = new Point(126, 176);
+            pictureBox24.Margin = new Padding(3, 4, 3, 4);
+            pictureBox24.Name = "pictureBox24";
+            pictureBox24.Size = new Size(35, 35);
+            pictureBox24.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox24.TabIndex = 23;
+            pictureBox24.TabStop = false;
+            // 
+            // pictureBox25
+            // 
+            pictureBox25.Image = Properties.Resources.pngwing_com27;
+            pictureBox25.Location = new Point(167, 176);
+            pictureBox25.Margin = new Padding(3, 4, 3, 4);
+            pictureBox25.Name = "pictureBox25";
+            pictureBox25.Size = new Size(35, 35);
+            pictureBox25.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox25.TabIndex = 24;
+            pictureBox25.TabStop = false;
+            // 
+            // flowLayoutPanel3
+            // 
+            flowLayoutPanel3.AutoScroll = true;
+            flowLayoutPanel3.Controls.Add(pictureBox26);
+            flowLayoutPanel3.Controls.Add(pictureBox27);
+            flowLayoutPanel3.Controls.Add(pictureBox28);
+            flowLayoutPanel3.Controls.Add(pictureBox29);
+            flowLayoutPanel3.Controls.Add(pictureBox30);
+            flowLayoutPanel3.Controls.Add(pictureBox31);
+            flowLayoutPanel3.Controls.Add(pictureBox32);
+            flowLayoutPanel3.Controls.Add(pictureBox33);
+            flowLayoutPanel3.Location = new Point(90, 388);
+            flowLayoutPanel3.Margin = new Padding(3, 4, 3, 4);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(229, 133);
+            flowLayoutPanel3.TabIndex = 6;
             // 
             // button18
             // 
-            button18.Image = Properties.Resources.pngwing_com_16;
-            button18.Location = new Point(111, 126);
-            button18.Name = "button18";
-            button18.Size = new Size(48, 35);
-            button18.TabIndex = 23;
-            button18.UseVisualStyleBackColor = true;
-            button18.Click += button18_Click;
+            pictureBox26.Image = Properties.Resources.st1;
+            pictureBox26.Location = new Point(3, 4);
+            pictureBox26.Margin = new Padding(3, 4, 3, 4);
+            pictureBox26.Name = "pictureBox26";
+            pictureBox26.Size = new Size(88, 89);
+            pictureBox26.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox26.TabIndex = 0;
+            pictureBox26.TabStop = false;
             // 
             // button19
             // 
-            button19.Image = Properties.Resources.pngwing_com17;
-            button19.Location = new Point(165, 126);
-            button19.Name = "button19";
-            button19.Size = new Size(48, 35);
-            button19.TabIndex = 24;
-            button19.UseVisualStyleBackColor = true;
-            button19.Click += button19_Click;
+            pictureBox27.Image = Properties.Resources.st2;
+            pictureBox27.Location = new Point(97, 4);
+            pictureBox27.Margin = new Padding(3, 4, 3, 4);
+            pictureBox27.Name = "pictureBox27";
+            pictureBox27.Size = new Size(88, 89);
+            pictureBox27.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox27.TabIndex = 1;
+            pictureBox27.TabStop = false;
             // 
             // button20
             // 
-            button20.Image = Properties.Resources.pngwing_com18;
-            button20.Location = new Point(3, 167);
-            button20.Name = "button20";
-            button20.Size = new Size(48, 35);
-            button20.TabIndex = 25;
-            button20.UseVisualStyleBackColor = true;
-            button20.Click += button20_Click;
+            pictureBox28.Image = Properties.Resources.st3;
+            pictureBox28.Location = new Point(3, 101);
+            pictureBox28.Margin = new Padding(3, 4, 3, 4);
+            pictureBox28.Name = "pictureBox28";
+            pictureBox28.Size = new Size(88, 89);
+            pictureBox28.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox28.TabIndex = 2;
+            pictureBox28.TabStop = false;
             // 
             // button21
             // 
-            button21.Image = Properties.Resources.pngwing_com19;
-            button21.Location = new Point(57, 167);
-            button21.Name = "button21";
-            button21.Size = new Size(48, 35);
-            button21.TabIndex = 26;
-            button21.UseVisualStyleBackColor = true;
-            button21.Click += button21_Click;
+            pictureBox29.Image = Properties.Resources.st4;
+            pictureBox29.Location = new Point(97, 101);
+            pictureBox29.Margin = new Padding(3, 4, 3, 4);
+            pictureBox29.Name = "pictureBox29";
+            pictureBox29.Size = new Size(88, 89);
+            pictureBox29.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox29.TabIndex = 3;
+            pictureBox29.TabStop = false;
             // 
             // button22
             // 
-            button22.Image = Properties.Resources.pngwing_com21;
-            button22.Location = new Point(111, 167);
-            button22.Name = "button22";
-            button22.Size = new Size(48, 35);
-            button22.TabIndex = 27;
-            button22.UseVisualStyleBackColor = true;
-            button22.Click += button22_Click;
+            pictureBox30.Image = Properties.Resources.st5;
+            pictureBox30.Location = new Point(3, 198);
+            pictureBox30.Margin = new Padding(3, 4, 3, 4);
+            pictureBox30.Name = "pictureBox30";
+            pictureBox30.Size = new Size(88, 89);
+            pictureBox30.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox30.TabIndex = 4;
+            pictureBox30.TabStop = false;
             // 
             // button23
             // 
-            button23.Image = Properties.Resources.pngwing_com24;
-            button23.Location = new Point(165, 167);
-            button23.Name = "button23";
-            button23.Size = new Size(48, 35);
-            button23.TabIndex = 28;
-            button23.UseVisualStyleBackColor = true;
-            button23.Click += button23_Click;
+            pictureBox31.Image = Properties.Resources.st6;
+            pictureBox31.Location = new Point(97, 198);
+            pictureBox31.Margin = new Padding(3, 4, 3, 4);
+            pictureBox31.Name = "pictureBox31";
+            pictureBox31.Size = new Size(88, 89);
+            pictureBox31.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox31.TabIndex = 5;
+            pictureBox31.TabStop = false;
             // 
             // button24
             // 
-            button24.Image = Properties.Resources.pngwing_com26;
-            button24.Location = new Point(3, 208);
-            button24.Name = "button24";
-            button24.Size = new Size(48, 35);
-            button24.TabIndex = 29;
-            button24.UseVisualStyleBackColor = true;
-            button24.Click += button24_Click;
+            pictureBox32.Image = Properties.Resources.st7;
+            pictureBox32.Location = new Point(3, 295);
+            pictureBox32.Margin = new Padding(3, 4, 3, 4);
+            pictureBox32.Name = "pictureBox32";
+            pictureBox32.Size = new Size(88, 89);
+            pictureBox32.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox32.TabIndex = 6;
+            pictureBox32.TabStop = false;
             // 
             // button25
             // 
-            button25.Image = Properties.Resources.pngwing_com27;
-            button25.Location = new Point(57, 208);
-            button25.Name = "button25";
-            button25.Size = new Size(48, 35);
-            button25.TabIndex = 30;
-            button25.UseVisualStyleBackColor = true;
-            button25.Click += button25_Click;
+            pictureBox33.Image = Properties.Resources.st8;
+            pictureBox33.Location = new Point(97, 295);
+            pictureBox33.Margin = new Padding(3, 4, 3, 4);
+            pictureBox33.Name = "pictureBox33";
+            pictureBox33.Size = new Size(88, 89);
+            pictureBox33.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox33.TabIndex = 7;
+            pictureBox33.TabStop = false;
             // 
             // ChatMenu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(flowLayoutPanel2);
             Controls.Add(button2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Controls.Add(textBox1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "ChatMenu";
-            Size = new Size(650, 524);
+            Size = new Size(725, 669);
             flowLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

@@ -6,16 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>WhatsApp-Image-2023-10-09-at-13.18.18_8d9e8ad9.ico.ico</ApplicationIcon>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\pngwing.com.png" />
-    <None Remove="Resources\pngwing.com2.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Resources\pngwing.com.png" />
-    <Resource Include="Resources\pngwing.com2.png" />
+    <Content Include="WhatsApp-Image-2023-10-09-at-13.18.18_8d9e8ad9.ico.ico" />
   </ItemGroup>
 
   <ItemGroup>

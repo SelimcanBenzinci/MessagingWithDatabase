@@ -400,29 +400,7 @@ namespace MessagingWithDatabase
             textBox1.Text = metin;
         }
 
-        private void button24_Click(object sender, EventArgs e)
-        {
-            // Emojiyi ekleyeceğiniz metni alın
-            string metin = textBox1.Text;
 
-            // Emojiyi ekleyin
-            metin += " 🤪";
-
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
-            textBox1.Text = metin;
-        }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-            // Emojiyi ekleyeceğiniz metni alın
-            string metin = textBox1.Text;
-
-            // Emojiyi ekleyin
-            metin += " 🥹";
-
-            // Sonuçları tekrar TextBox'a veya RichTextBox'a yerleştirin
-            textBox1.Text = metin;
-        }
 
 
     }
