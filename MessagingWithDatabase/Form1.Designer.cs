@@ -39,7 +39,7 @@
             // 
             panel1.Location = new Point(379, 67);
             panel1.Name = "panel1";
-            panel1.Size = new Size(618, 594);
+            panel1.Size = new Size(763, 594);
             panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -88,7 +88,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
-            ClientSize = new Size(1154, 970);
+            ClientSize = new Size(1154, 740);
             Controls.Add(button1);
             Controls.Add(CreateGroupButton);
             Controls.Add(AccountButton);

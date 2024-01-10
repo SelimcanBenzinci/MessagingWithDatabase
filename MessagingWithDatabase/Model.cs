@@ -219,6 +219,12 @@ namespace MessagingWithDatabase
 
         public void SendMessage(IChatBox chat, string message)
         {
+            if (string.IsNullOrWhiteSpace(message))
+            {
+                // Handle the case where the message is empty
+               MessageBox.Show("Mesaj alanı boş bırakılamaz.");
+                return;
+            }
             if (chat.GetType() == typeof(User))
             {
                 Message msg = new Message()
