@@ -44,7 +44,7 @@ namespace MessagingWithDatabase
                 var imageSize = PictureBox.Image.Size;
                 var fitSize = PictureBox.ClientSize;
                 PictureBox.SizeMode = imageSize.Width > fitSize.Width || imageSize.Height > fitSize.Height ?
-                PictureBoxSizeMode.Zoom : PictureBoxSizeMode.CenterImage; 
+                PictureBoxSizeMode.Zoom : PictureBoxSizeMode.CenterImage;
             }
 
         }

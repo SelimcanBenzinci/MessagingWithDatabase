@@ -35,6 +35,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = SystemColors.Info;
             textBox1.Location = new Point(22, 323);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(266, 27);
@@ -62,6 +63,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Controls.Add(textBox1);

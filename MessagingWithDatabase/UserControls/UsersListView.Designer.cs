@@ -28,26 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.SuspendLayout();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(363, 451);
-            this.flowLayoutPanel1.TabIndex = 0;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.BackColor = SystemColors.GrayText;
+            flowLayoutPanel1.Location = new Point(3, 4);
+            flowLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(415, 601);
+            flowLayoutPanel1.TabIndex = 0;
             // 
             // UsersListView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Name = "UsersListView";
-            this.Size = new System.Drawing.Size(369, 457);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(flowLayoutPanel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "UsersListView";
+            Size = new Size(422, 609);
+            ResumeLayout(false);
         }
 
         #endregion

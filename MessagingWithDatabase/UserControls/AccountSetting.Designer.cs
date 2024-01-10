@@ -44,41 +44,50 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.GradientActiveCaption;
+            label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Location = new Point(44, 50);
             label1.Name = "label1";
-            label1.Size = new Size(36, 20);
+            label1.Size = new Size(38, 22);
             label1.TabIndex = 0;
             label1.Text = "İsim";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BorderStyle = BorderStyle.Fixed3D;
             label2.Location = new Point(44, 91);
             label2.Name = "label2";
-            label2.Size = new Size(54, 20);
+            label2.Size = new Size(56, 22);
             label2.TabIndex = 1;
             label2.Text = "Durum";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = SystemColors.GradientActiveCaption;
+            label3.BorderStyle = BorderStyle.Fixed3D;
             label3.Location = new Point(44, 134);
             label3.Name = "label3";
-            label3.Size = new Size(53, 20);
+            label3.Size = new Size(55, 22);
             label3.TabIndex = 2;
             label3.Text = "Gizlilik";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.BackColor = SystemColors.GradientActiveCaption;
+            label4.BorderStyle = BorderStyle.Fixed3D;
             label4.Location = new Point(49, 223);
             label4.Name = "label4";
-            label4.Size = new Size(49, 20);
+            label4.Size = new Size(51, 22);
             label4.TabIndex = 3;
             label4.Text = "Resim";
             // 
             // NameText
             // 
+            NameText.BackColor = SystemColors.Info;
             NameText.Location = new Point(151, 50);
             NameText.Name = "NameText";
             NameText.Size = new Size(217, 27);
@@ -86,6 +95,7 @@
             // 
             // StatusText
             // 
+            StatusText.BackColor = SystemColors.Info;
             StatusText.Location = new Point(151, 91);
             StatusText.Name = "StatusText";
             StatusText.Size = new Size(217, 27);
@@ -93,6 +103,7 @@
             // 
             // visiblityText
             // 
+            visiblityText.BackColor = SystemColors.Info;
             visiblityText.FormattingEnabled = true;
             visiblityText.ItemHeight = 20;
             visiblityText.Location = new Point(151, 130);
@@ -132,6 +143,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
             Controls.Add(SaveButton);
             Controls.Add(button1);
             Controls.Add(PictureBox);
