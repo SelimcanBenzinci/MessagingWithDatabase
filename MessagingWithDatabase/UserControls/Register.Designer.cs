@@ -31,25 +31,31 @@
             MailText = new TextBox();
             PasswordText = new TextBox();
             button1 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // MailText
             // 
-            MailText.Location = new Point(280, 39);
+            MailText.BackColor = SystemColors.Info;
+            MailText.Location = new Point(280, 50);
             MailText.Name = "MailText";
-            MailText.Size = new Size(125, 27);
+            MailText.Size = new Size(180, 27);
             MailText.TabIndex = 0;
             // 
             // PasswordText
             // 
-            PasswordText.Location = new Point(280, 87);
+            PasswordText.BackColor = SystemColors.Info;
+            PasswordText.Location = new Point(280, 127);
             PasswordText.Name = "PasswordText";
-            PasswordText.Size = new Size(125, 27);
+            PasswordText.Size = new Size(180, 27);
             PasswordText.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(292, 139);
+            button1.Location = new Point(295, 169);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 2;
@@ -57,15 +63,52 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = SystemColors.GradientActiveCaption;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Location = new Point(280, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(38, 22);
+            label1.TabIndex = 3;
+            label1.Text = "İsim";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = SystemColors.GradientActiveCaption;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.Location = new Point(280, 95);
+            label2.Name = "label2";
+            label2.Size = new Size(41, 22);
+            label2.TabIndex = 4;
+            label2.Text = "Şifre";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2023_10_09_at_13_18_18_8d9e8ad9_ico;
+            pictureBox1.Location = new Point(29, 28);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(204, 156);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
+            Controls.Add(pictureBox1);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(PasswordText);
             Controls.Add(MailText);
             Name = "Register";
-            Size = new Size(579, 201);
+            Size = new Size(523, 215);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -75,5 +118,8 @@
         private TextBox MailText;
         private TextBox PasswordText;
         private Button button1;
+        private Label label1;
+        private Label label2;
+        private PictureBox pictureBox1;
     }
 }
