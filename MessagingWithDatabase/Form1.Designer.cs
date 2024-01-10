@@ -28,79 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.AccountButton = new System.Windows.Forms.Button();
-            this.CreateGroupButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            panel1 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            AccountButton = new Button();
+            CreateGroupButton = new Button();
+            button1 = new Button();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(379, 66);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(428, 323);
-            this.panel1.TabIndex = 0;
+            panel1.Location = new Point(379, 66);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(618, 595);
+            panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(50, 27);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(278, 374);
-            this.flowLayoutPanel1.TabIndex = 1;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Location = new Point(50, 27);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(278, 374);
+            flowLayoutPanel1.TabIndex = 1;
             // 
             // AccountButton
             // 
-            this.AccountButton.Location = new System.Drawing.Point(620, 428);
-            this.AccountButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AccountButton.Name = "AccountButton";
-            this.AccountButton.Size = new System.Drawing.Size(104, 29);
-            this.AccountButton.TabIndex = 2;
-            this.AccountButton.Text = "Hesap Ayarları";
-            this.AccountButton.UseVisualStyleBackColor = true;
-            this.AccountButton.Visible = false;
-            this.AccountButton.Click += new System.EventHandler(this.AccountButton_Click);
+            AccountButton.Location = new Point(606, 667);
+            AccountButton.Margin = new Padding(3, 2, 3, 2);
+            AccountButton.Name = "AccountButton";
+            AccountButton.Size = new Size(104, 29);
+            AccountButton.TabIndex = 2;
+            AccountButton.Text = "Hesap Ayarları";
+            AccountButton.UseVisualStyleBackColor = true;
+            AccountButton.Visible = false;
+            AccountButton.Click += AccountButton_Click;
             // 
             // CreateGroupButton
             // 
-            this.CreateGroupButton.Location = new System.Drawing.Point(492, 428);
-            this.CreateGroupButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CreateGroupButton.Name = "CreateGroupButton";
-            this.CreateGroupButton.Size = new System.Drawing.Size(107, 29);
-            this.CreateGroupButton.TabIndex = 3;
-            this.CreateGroupButton.Text = "Grup Oluştur";
-            this.CreateGroupButton.UseVisualStyleBackColor = true;
-            this.CreateGroupButton.Visible = false;
-            this.CreateGroupButton.Click += new System.EventHandler(this.CreateGroupButton_Click_1);
+            CreateGroupButton.Location = new Point(493, 666);
+            CreateGroupButton.Margin = new Padding(3, 2, 3, 2);
+            CreateGroupButton.Name = "CreateGroupButton";
+            CreateGroupButton.Size = new Size(107, 29);
+            CreateGroupButton.TabIndex = 3;
+            CreateGroupButton.Text = "Grup Oluştur";
+            CreateGroupButton.UseVisualStyleBackColor = true;
+            CreateGroupButton.Visible = false;
+            CreateGroupButton.Click += CreateGroupButton_Click_1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(379, 428);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 29);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Kişi Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            button1.Location = new Point(398, 666);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 29);
+            button1.TabIndex = 4;
+            button1.Text = "Kişi Ekle";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 469);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.CreateGroupButton);
-            this.Controls.Add(this.AccountButton);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1202, 707);
+            Controls.Add(button1);
+            Controls.Add(CreateGroupButton);
+            Controls.Add(AccountButton);
+            Controls.Add(flowLayoutPanel1);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
