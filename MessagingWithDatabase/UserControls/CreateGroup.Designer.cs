@@ -70,6 +70,7 @@
             // 
             // DescText
             // 
+            DescText.BackColor = SystemColors.Info;
             DescText.Location = new Point(107, 63);
             DescText.Name = "DescText";
             DescText.Size = new Size(160, 27);
@@ -77,6 +78,7 @@
             // 
             // NameText
             // 
+            NameText.BackColor = SystemColors.Info;
             NameText.Location = new Point(107, 22);
             NameText.Name = "NameText";
             NameText.Size = new Size(160, 27);
@@ -85,27 +87,33 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.BorderStyle = BorderStyle.Fixed3D;
+            label4.ForeColor = SystemColors.GradientActiveCaption;
             label4.Location = new Point(29, 111);
             label4.Name = "label4";
-            label4.Size = new Size(49, 20);
+            label4.Size = new Size(51, 22);
             label4.TabIndex = 14;
             label4.Text = "Resim";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.BorderStyle = BorderStyle.Fixed3D;
+            label2.ForeColor = SystemColors.GradientActiveCaption;
             label2.Location = new Point(29, 63);
             label2.Name = "label2";
-            label2.Size = new Size(70, 20);
+            label2.Size = new Size(72, 22);
             label2.TabIndex = 12;
             label2.Text = "Açıklama";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.ForeColor = SystemColors.GradientActiveCaption;
             label1.Location = new Point(29, 22);
             label1.Name = "label1";
-            label1.Size = new Size(72, 20);
+            label1.Size = new Size(74, 22);
             label1.TabIndex = 11;
             label1.Text = "Grup İsmi";
             // 
@@ -120,6 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
             Controls.Add(flowLayoutPanel1);
             Controls.Add(SaveButton);
             Controls.Add(button1);

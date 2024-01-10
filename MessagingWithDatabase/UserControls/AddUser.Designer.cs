@@ -28,64 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NameLabel = new System.Windows.Forms.Label();
-            this.StatusLabel = new System.Windows.Forms.Label();
-            this.AddButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            NameLabel = new Label();
+            StatusLabel = new Label();
+            AddButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Location = new Point(14, 4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(114, 133);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // NameLabel
             // 
-            this.NameLabel.AutoSize = true;
-            this.NameLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NameLabel.Location = new System.Drawing.Point(131, 20);
-            this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(52, 21);
-            this.NameLabel.TabIndex = 1;
-            this.NameLabel.Text = "label1";
+            NameLabel.AutoSize = true;
+            NameLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            NameLabel.Location = new Point(150, 27);
+            NameLabel.Name = "NameLabel";
+            NameLabel.Size = new Size(65, 28);
+            NameLabel.TabIndex = 1;
+            NameLabel.Text = "label1";
             // 
             // StatusLabel
             // 
-            this.StatusLabel.AutoSize = true;
-            this.StatusLabel.Location = new System.Drawing.Point(131, 65);
-            this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(38, 15);
-            this.StatusLabel.TabIndex = 2;
-            this.StatusLabel.Text = "label2";
+            StatusLabel.AutoSize = true;
+            StatusLabel.Location = new Point(150, 87);
+            StatusLabel.Name = "StatusLabel";
+            StatusLabel.Size = new Size(50, 20);
+            StatusLabel.TabIndex = 2;
+            StatusLabel.Text = "label2";
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(274, 27);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(52, 50);
-            this.AddButton.TabIndex = 3;
-            this.AddButton.Text = "Ekle";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            AddButton.Location = new Point(313, 36);
+            AddButton.Margin = new Padding(3, 4, 3, 4);
+            AddButton.Name = "AddButton";
+            AddButton.Size = new Size(59, 67);
+            AddButton.TabIndex = 3;
+            AddButton.Text = "Ekle";
+            AddButton.UseVisualStyleBackColor = true;
+            AddButton.Click += AddButton_Click;
             // 
             // AddUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.StatusLabel);
-            this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "AddUser";
-            this.Size = new System.Drawing.Size(335, 108);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
+            Controls.Add(AddButton);
+            Controls.Add(StatusLabel);
+            Controls.Add(NameLabel);
+            Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "AddUser";
+            Size = new Size(383, 144);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

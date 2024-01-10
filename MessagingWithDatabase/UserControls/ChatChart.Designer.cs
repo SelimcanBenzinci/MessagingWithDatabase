@@ -61,14 +61,15 @@
             statusLabel.TabIndex = 3;
             statusLabel.Text = "label1";
             // 
-            // UserChart
+            // ChatChart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GrayText;
             Controls.Add(statusLabel);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
-            Name = "UserChart";
+            Name = "ChatChart";
             Size = new Size(313, 111);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
