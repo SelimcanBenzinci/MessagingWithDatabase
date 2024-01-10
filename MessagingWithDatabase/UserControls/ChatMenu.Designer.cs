@@ -107,8 +107,8 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = SystemColors.Info;
-            textBox1.Location = new Point(22, 323);
+            textBox1.Location = new Point(19, 242);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(233, 23);
             textBox1.TabIndex = 0;
@@ -536,7 +536,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.GrayText;
+            Controls.Add(flowLayoutPanel3);
+            Controls.Add(flowLayoutPanel2);
+            Controls.Add(button3);
+            Controls.Add(button2);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(button1);
             Controls.Add(textBox1);

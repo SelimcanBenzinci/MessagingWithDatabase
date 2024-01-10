@@ -37,24 +37,27 @@
             // 
             // panel1
             // 
-            panel1.Location = new Point(433, 88);
+            panel1.Location = new Point(379, 66);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(565, 431);
+            panel1.Size = new Size(618, 595);
             panel1.TabIndex = 0;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(57, 36);
+            flowLayoutPanel1.Location = new Point(50, 27);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(318, 499);
+            flowLayoutPanel1.Size = new Size(278, 374);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // AccountButton
             // 
-            AccountButton.Location = new Point(709, 571);
+            AccountButton.Location = new Point(606, 667);
+            AccountButton.Margin = new Padding(3, 2, 3, 2);
             AccountButton.Name = "AccountButton";
-            AccountButton.Size = new Size(119, 39);
+            AccountButton.Size = new Size(104, 29);
             AccountButton.TabIndex = 2;
             AccountButton.Text = "Hesap Ayarları";
             AccountButton.UseVisualStyleBackColor = true;
@@ -63,9 +66,10 @@
             // 
             // CreateGroupButton
             // 
-            CreateGroupButton.Location = new Point(562, 571);
+            CreateGroupButton.Location = new Point(493, 666);
+            CreateGroupButton.Margin = new Padding(3, 2, 3, 2);
             CreateGroupButton.Name = "CreateGroupButton";
-            CreateGroupButton.Size = new Size(122, 39);
+            CreateGroupButton.Size = new Size(107, 29);
             CreateGroupButton.TabIndex = 3;
             CreateGroupButton.Text = "Grup Oluştur";
             CreateGroupButton.UseVisualStyleBackColor = true;
