@@ -36,23 +36,24 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // MailText
             // 
             MailText.BackColor = SystemColors.Info;
-            MailText.Location = new Point(251, 74);
+            MailText.Location = new Point(272, 74);
             MailText.Name = "MailText";
-            MailText.Size = new Size(238, 27);
+            MailText.Size = new Size(217, 27);
             MailText.TabIndex = 0;
             // 
             // PasswordText
             // 
             PasswordText.BackColor = SystemColors.Info;
-            PasswordText.Location = new Point(251, 149);
+            PasswordText.Location = new Point(272, 146);
             PasswordText.Name = "PasswordText";
-            PasswordText.Size = new Size(238, 27);
+            PasswordText.Size = new Size(217, 27);
             PasswordText.TabIndex = 1;
             // 
             // button1
@@ -86,9 +87,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.WhatsApp_Image_2023_10_09_at_13_18_18_8d9e8ad9_ico;
-            pictureBox1.Location = new Point(18, 42);
+            pictureBox1.Location = new Point(12, 42);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(210, 164);
+            pictureBox1.Size = new Size(192, 164);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -98,7 +99,7 @@
             label2.AutoSize = true;
             label2.BorderStyle = BorderStyle.Fixed3D;
             label2.ForeColor = SystemColors.GradientActiveCaption;
-            label2.Location = new Point(251, 42);
+            label2.Location = new Point(213, 74);
             label2.Name = "label2";
             label2.Size = new Size(38, 22);
             label2.TabIndex = 6;
@@ -109,17 +110,29 @@
             label3.AutoSize = true;
             label3.BorderStyle = BorderStyle.Fixed3D;
             label3.ForeColor = SystemColors.GradientActiveCaption;
-            label3.Location = new Point(249, 115);
+            label3.Location = new Point(210, 146);
             label3.Name = "label3";
             label3.Size = new Size(41, 22);
             label3.TabIndex = 7;
             label3.Text = "Şifre";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = SystemColors.GradientActiveCaption;
+            label4.BorderStyle = BorderStyle.Fixed3D;
+            label4.Location = new Point(277, 27);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 22);
+            label4.TabIndex = 8;
+            label4.Text = "Giriş Yap";
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
+            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
@@ -145,5 +158,6 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Label label3;
+        private Label label4;
     }
 }

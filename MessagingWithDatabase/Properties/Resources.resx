@@ -121,9 +121,6 @@
   <data name="WhatsApp Image 2023-10-09 at 13.18.18_8d9e8ad9.ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2023-10-09 at 13.18.18_8d9e8ad9.ico.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="st1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\st1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="st2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\st2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -228,5 +225,8 @@
   </data>
   <data name="bildirim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bildirim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="st1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\st1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -38,6 +38,7 @@
             PictureBox = new PictureBox();
             button1 = new Button();
             SaveButton = new Button();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)PictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -139,11 +140,23 @@
             SaveButton.UseVisualStyleBackColor = true;
             SaveButton.Click += SaveButton_Click;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = SystemColors.GradientActiveCaption;
+            label5.BorderStyle = BorderStyle.Fixed3D;
+            label5.Location = new Point(151, 12);
+            label5.Name = "label5";
+            label5.Size = new Size(101, 22);
+            label5.TabIndex = 11;
+            label5.Text = "Profil Ayarları";
+            // 
             // AccountSetting
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
+            Controls.Add(label5);
             Controls.Add(SaveButton);
             Controls.Add(button1);
             Controls.Add(PictureBox);
@@ -173,5 +186,6 @@
         private PictureBox PictureBox;
         private Button button1;
         private Button SaveButton;
+        private Label label5;
     }
 }

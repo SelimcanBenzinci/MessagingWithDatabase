@@ -188,7 +188,7 @@ namespace MessagingWithDatabase
             notificationPanel.Location = new Point(340, 40);
 
             zilPictureBox = new PictureBox();
-            zilPictureBox.Image = Properties.Resources.bildirim; 
+            zilPictureBox.Image = Properties.Resources.bildirim;
             zilPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
             zilPictureBox.Click += (s, e) => notificationPanel.Visible = !notificationPanel.Visible;
             Controls.Add(zilPictureBox);
@@ -214,7 +214,7 @@ namespace MessagingWithDatabase
             }
         }
 
-       
+
 
 
     }
